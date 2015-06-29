@@ -1,0 +1,90 @@
+---
+title: Test punteggio
+---
+
+
+
+
+javascript:
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1462324664061074',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+
+  function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++)
+      {
+          var sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] == sParam)
+          {
+              return sParameterName[1];
+          }
+      }
+  }
+
+  $( document ).ready(function(){
+    if(getUrlParameter("p") == null){
+      window.location.replace("https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631");
+    }
+    total = parseInt(getUrlParameter("p"));
+
+
+    if( total > 900){
+      t = "#tipo7";
+    }
+    else if(total == 0){
+      t = "#tipo6";
+    }
+    else if(total >= 1 && total <= 79){
+      t = "#tipo5";
+    }
+    else if(total >= 181 && total <= 200){
+      t = "#tipo4";
+    }
+    else if(total == 80){
+      t = "#tipo3";
+    }
+    else if(total >= 81 && total <= 180){
+      t = "#tipo2";
+    }
+    else if(total >= 201 && total <= 270){
+      t = "#tipo1";
+    }
+    $(t).show();
+    $("meta[property='og\\:title']").attr("content", "PUPPPAAAAAAAA");
+    $("meta[property='og\\:url']").attr("content", "http://www.repubblica.it");
+  })
+
+
+
+#fb-root
+div class="fb-share-button" data-layout="button"
+
+// data-href="https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631"
+
+h1 Osservatorio alpha
+
+- data.typologies.each_with_index do |t, i|
+  .result id=t[0]
+    .flag
+      .flag__image: img src=t[1].image
+      .flag__body
+        h2.alpha = t[1].name
+        p = t[1].description
+        .margin--top-2
+          a.button condividi
