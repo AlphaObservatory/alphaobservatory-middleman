@@ -4,7 +4,6 @@ title: Test punteggio
 
 
 
-
 javascript:
 
   window.fbAsyncInit = function() {
@@ -38,53 +37,47 @@ javascript:
   }
 
   $( document ).ready(function(){
-    if(getUrlParameter("p") == null){
-      window.location.replace("https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631");
-    }
     total = parseInt(getUrlParameter("p"));
 
 
     if( total > 900){
-      t = "#tipo7";
+      t = "tipo7";
     }
     else if(total == 0){
-      t = "#tipo6";
+      t = "tipo6";
     }
     else if(total >= 1 && total <= 79){
-      t = "#tipo5";
+      t = "tipo5";
     }
     else if(total >= 181 && total <= 200){
-      t = "#tipo4";
+      t = "tipo4";
     }
     else if(total == 80){
-      t = "#tipo3";
+      t = "tipo3";
     }
     else if(total >= 81 && total <= 180){
-      t = "#tipo2";
+      t = "tipo2";
     }
     else if(total >= 201 && total <= 270){
-      t = "#tipo1";
+      t = "tipo1";
     }
-    $(t).show();
-    $("meta[property='og\\:title']").attr("content", "PUPPPAAAAAAAA");
-    $("meta[property='og\\:url']").attr("content", "http://www.repubblica.it");
+    document.location.href="/"+t
+
   })
 
 
 
 #fb-root
-div class="fb-share-button" data-layout="button"
+div class="fb-share-button" data-layout="button" data-href="http://suca.com/"
 
-// data-href="https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631"
 
 h1 Osservatorio alpha
 
-- data.typologies.each_with_index do |t, i|
-  .result id=t[0]
-    .flag
-      .flag__image: img src=t[1].image
-      .flag__body
-        h2.alpha = t[1].name
-        p = t[1].description
-        .margin--top-2
-          a.button condividi
+.result
+  .flag
+    .flag__image: img src=typology.image
+    .flag__body
+      h2.alpha = typology.name
+      p = typology.description
+      .margin--top-2
+        a class="btn" target="_blank" href="https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http%3A%2F%2Fgoogle.com&picture=http%3A%2F%2Fcdn2.stbm.it%2Fzingarate%2Fgallery%2Ffoto%2Froma%2Fvacanze-romane-compie-60-anni-viaggio-nei-luoghi-del-film%2Fla-bocca-della-verita.jpeg%3F-3600&name=Sei+una+fava&description=Melo&redirect_uri=http://facebook.com/" share on facebook

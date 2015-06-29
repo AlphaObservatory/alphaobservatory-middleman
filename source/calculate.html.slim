@@ -1,0 +1,46 @@
+---
+title: Calcolo punteggio
+---
+
+javascript:
+  function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++)
+      {
+          var sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] == sParam)
+          {
+              return sParameterName[1];
+          }
+      }
+  }
+
+  $( document ).ready(function(){
+    total = parseInt(getUrlParameter("p"));
+
+
+    if( total > 900){
+      t = "tipo7";
+    }
+    else if(total == 0){
+      t = "tipo6";
+    }
+    else if(total >= 1 && total <= 79){
+      t = "tipo5";
+    }
+    else if(total >= 181 && total <= 200){
+      t = "tipo4";
+    }
+    else if(total == 80){
+      t = "tipo3";
+    }
+    else if(total >= 81 && total <= 180){
+      t = "tipo2";
+    }
+    else if(total >= 201 && total <= 270){
+      t = "tipo1";
+    }
+    document.location.href="/"+t
+
+  })
