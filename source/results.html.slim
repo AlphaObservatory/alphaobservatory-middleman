@@ -1,8 +1,6 @@
 ---
-title: Test punteggio
+title: Risultato osservazione
 ---
-
-
 
 javascript:
 
@@ -14,64 +12,14 @@ javascript:
     });
   };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
-
-  function getUrlParameter(sParam) {
-      var sPageURL = window.location.search.substring(1);
-      var sURLVariables = sPageURL.split('&');
-      for (var i = 0; i < sURLVariables.length; i++)
-      {
-          var sParameterName = sURLVariables[i].split('=');
-          if (sParameterName[0] == sParam)
-          {
-              return sParameterName[1];
-          }
-      }
-  }
-
-  $( document ).ready(function(){
-    total = parseInt(getUrlParameter("p"));
-
-
-    if( total > 900){
-      t = "tipo7";
-    }
-    else if(total == 0){
-      t = "tipo6";
-    }
-    else if(total >= 1 && total <= 79){
-      t = "tipo5";
-    }
-    else if(total >= 181 && total <= 200){
-      t = "tipo4";
-    }
-    else if(total == 80){
-      t = "tipo3";
-    }
-    else if(total >= 81 && total <= 180){
-      t = "tipo2";
-    }
-    else if(total >= 201 && total <= 270){
-      t = "tipo1";
-    }
-    document.location.href="/"+t
-
-  })
-
-
-
-#fb-root
-div class="fb-share-button" data-layout="button" data-href="http://suca.com/"
-
-
 h1 Osservatorio alpha
+
+- app_url     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
+- picture     = CGI.escape(typology.image)
+- name        = CGI.escape(typology.name)
+- description = CGI.escape(typology.description)
+
+- url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
 
 .result
   .flag
@@ -80,4 +28,4 @@ h1 Osservatorio alpha
       h2.alpha = typology.name
       p = typology.description
       .margin--top-2
-        a class="btn" target="_blank" href="https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http%3A%2F%2Fgoogle.com&picture=http%3A%2F%2Fcdn2.stbm.it%2Fzingarate%2Fgallery%2Ffoto%2Froma%2Fvacanze-romane-compie-60-anni-viaggio-nei-luoghi-del-film%2Fla-bocca-della-verita.jpeg%3F-3600&name=Sei+una+fava&description=Melo&redirect_uri=http://facebook.com/" share on facebook
+        a class="btn" target="_blank" href=url Share on facebook
