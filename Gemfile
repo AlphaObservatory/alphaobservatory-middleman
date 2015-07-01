@@ -12,6 +12,7 @@ gem "sanitize"
 gem "sass"
 gem "sass-globbing"
 gem "slim"
+gem "s3_website"
 gem "truncate"
 
 gem 'rails-assets-normalize-scss'

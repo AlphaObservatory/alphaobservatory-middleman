@@ -1,0 +1,32 @@
+site: build
+
+max_age:
+  "fonts/*": <%= 60 * 60 * 24 * 30 %>
+  "images/*": <%= 60 * 60 * 24 * 30 %>
+  "javascripts/*": <%= 60 * 60 * 24 * 30 %>
+  "stylesheets/*": <%= 60 * 60 * 24 * 30 %>
+
+gzip:
+  - .html
+  - .css
+  - .js
+  - .svg
+  - .eot
+  - .ttf
+  - .woff
+  - .woff2
+
+exclude_from_upload:
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+concurrency_level: 5
+
+s3_id: AKIAJOFOB5QTMN4KVIHA
+s3_secret: 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
+s3_bucket: www.alphaobservatory.org
+s3_endpoint: eu-west-1
+

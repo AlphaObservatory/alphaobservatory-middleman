@@ -12,8 +12,6 @@ javascript:
     });
   };
 
-h1 Osservatorio alpha
-
 - app_url     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
 - picture     = CGI.escape(typology.image)
 - name        = CGI.escape(typology.name)
@@ -21,11 +19,15 @@ h1 Osservatorio alpha
 
 - url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
 
-.result
-  .flag
-    .flag__image: img src=typology.image
-    .flag__body
-      h2.alpha = typology.name
-      p = typology.description
-      .margin--top-2
-        a class="btn" target="_blank" href=url Share on facebook
+
+.wrap
+  h1.huge = typology.name
+  .result
+    .flag
+      .flag__image: img src=typology.image
+      .flag__body
+        p = typology.description
+
+.wrap.align--center.space--top-2
+  a class="button--facebook" target="_blank" href=url Condividi su facebook
+
