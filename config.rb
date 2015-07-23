@@ -28,5 +28,4 @@ configure :build do  # For example, change the Compass output style for deployme
   activate :minify_css
   activate :directory_indexes
   activate :minify_javascript
-  activate :asset_hash
 end

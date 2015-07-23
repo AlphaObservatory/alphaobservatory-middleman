@@ -13,7 +13,7 @@ javascript:
   };
 
 - app_url     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
-- picture     = "http://www.alphaobservatory.org/images/typologies/#{CGI.escape(typology.image)}"
+- picture     = CGI.escape("http://www.alphaobservatory.org/#{image_path(typology.image)}")
 - name        = CGI.escape("Sono un tipo #{ typology.name }! E tu che tipo sei?!")
 - description = CGI.escape(typology.description)
 
