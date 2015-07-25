@@ -31,5 +31,9 @@ javascript:
       .flag__body
         p.result__body
           = typology.description
-    .space--top-2.align--right: a class="button--facebook" target="_blank" href=url Condividi su facebook
+    .space--top-2.align--right: a.js-fb-share class="button--facebook" target="_blank" href=url Condividi su facebook
 
+javascript:
+  $(".js-fb-share").click( function() {
+        ga('send', 'event', 'Clicks', 'FB Share', '#{typology.slug} shared on facebook');
+  });
