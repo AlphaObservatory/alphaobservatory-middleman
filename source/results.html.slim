@@ -25,7 +25,7 @@ javascript:
 .result-page: .wrap
   .grid
     .grid__item
-      h1.huge Sei un tipo: #{typology.name}!
+      h1.huge Sei un tipo #{typology.name.downcase}!
 
     .grid__item.lap-5-12
       .result__image.align--center
@@ -36,7 +36,9 @@ javascript:
         = typology.description
 
     .grid__item
-      .space--top-2.align--center: a.js-fb-share class="button--facebook" target="_blank" href=url Condividi su facebook
+      .space--top-2.align--center
+        .space--both-2: h3.beta Hey #{typology.name.downcase}, condividi che tipo sei sulla tua bacheca!
+        a.js-fb-share class="button--facebook" target="_blank" href=url Share on facebook
 
 
 javascript:
