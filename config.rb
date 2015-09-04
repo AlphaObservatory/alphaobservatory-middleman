@@ -4,6 +4,11 @@ data.typologies.each do |t|
 end
 ignore "results.html"
 
+data.typologies.each do |t|
+  proxy "/#{t.slug}-offline.html", "/results-offline.html", :locals => { :typology => t }
+end
+ignore "results-offline.html"
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

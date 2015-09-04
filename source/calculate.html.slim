@@ -5,6 +5,7 @@ title: Calcolo punteggio
 javascript:
   $( document ).ready(function(){
     total = parseInt(getUrlParameter("p"));
+    offline = getUrlParameter("offline") == 1 ? true : false;
 
 
     if( total > 900){
@@ -28,6 +29,12 @@ javascript:
     else if(total >= 201 && total <= 270){
       t = "tipo1";
     }
-    document.location.href="/"+t
+
+    if(offline == false){
+      document.location.href="/"+t
+    }
+    else{
+      document.location.href="/"+t+"-offline"
+    }
 
   })
