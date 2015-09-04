@@ -20,6 +20,11 @@ javascript:
 
 - url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
 
+- name_quiz        = CGI.escape("E tu che tipo sei?!")
+- description_quiz = CGI.escape("Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!")
+- picture_quiz     = CGI.escape("http://www.alphaobservatory.org/images/3-doors.jpg")
+- url_quiz = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http://www.alphaobservatory.org/&description=#{ description_quiz }&redirect_uri=http://facebook.com/"
+
 .result-page__bg style="background-image: url(/images/typologies/small/#{typology.image}"
 
 .result-page: .wrap
@@ -35,13 +40,21 @@ javascript:
       .result__body
         = typology.description
 
-    .grid__item
+    .grid__item.lap-6-12
       .space--top-2.align--center
-        .space--both-2: h3.beta Hey #{typology.name.downcase}, condividi che tipo sei sulla tua bacheca!
+        .space--both-2: h3.beta Condividi che tipo sei con i tuoi amici!
         a.js-fb-share class="button--facebook" target="_blank" href=url Share on facebook
+
+    .grid__item.lap-6-12
+      .space--top-2.align--center
+        .space--both-2: h3.beta Oppure invitali a fare questo quiz!
+        a.js-fb-share-quiz class="button--facebook" target="_blank" href=url_quiz Share on facebook
 
 
 javascript:
   $(".js-fb-share").click( function() {
         ga('send', 'event', 'Clicks', 'FB Share', '#{typology.slug} shared on facebook');
+  });
+  $(".js-fb-share-quiz").click( function() {
+        ga('send', 'event', 'Clicks', 'FB Share', 'Website Shared (via #{typology.slug})');
   });
