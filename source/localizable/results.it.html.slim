@@ -1,0 +1,63 @@
+---
+title: Risultato osservazione
+---
+
+javascript:
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1462324664061074',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+- app_url_facebook     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
+- app_url     = CGI.escape('http://www.alphaobservatory.org/prima-inchiesta/?shared=1')
+- picture     = CGI.escape("http://www.alphaobservatory.org/images/typologies/#{typology.image}")
+- name        = CGI.escape("Sono un tipo #{ typology.name }! E tu che tipo sei?!")
+- description = CGI.escape(typology.description)
+
+- url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
+
+- name_quiz        = CGI.escape("E tu che tipo sei?!")
+- description_quiz = CGI.escape("Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!")
+- picture_quiz     = CGI.escape("http://www.alphaobservatory.org/images/3-doors.jpg")
+- url_quiz = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http://www.alphaobservatory.org/&description=#{ description_quiz }&redirect_uri=http://facebook.com/"
+
+.result-page__bg style="background-image: url(/images/typologies/small/#{typology.image}"
+
+.result-page: .wrap
+  .grid
+    .grid__item
+      h1.huge Sei un tipo #{typology.name.downcase}!
+
+    .grid__item.lap-5-12
+      .result__image.align--center
+        = image_tag "typologies/#{typology.image}"
+
+    .grid__item.lap-7-12
+      .result__body
+        = typology.description
+
+    .grid__item.lap-6-12
+      .space--top-2.align--center
+        .space--both-2: h3.beta Condividi che tipo sei con i tuoi amici!
+        a.js-fb-share class="button--facebook" target="_blank" href=url Share on facebook
+
+    .grid__item.lap-6-12
+      .space--top-2.align--center
+        .space--both-2: h3.beta Oppure invitali a fare questo quiz!
+        .addthis_sharing_toolbox data-url="http://www.alphaobservatory.org" data-title="Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!"
+
+
+
+
+
+javascript:
+  $(".js-fb-share").click( function() {
+        ga('send', 'event', 'Clicks', 'FB Share', '#{typology.slug} shared on facebook');
+  });
+  $(".js-fb-share-quiz").click( function() {
+        ga('send', 'event', 'Clicks', 'FB Share', 'Website Shared (via #{typology.slug})');
+  });

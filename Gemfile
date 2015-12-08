@@ -5,6 +5,7 @@ source 'https://rails-assets.org'
 
 gem "jquery-middleman"
 gem "middleman", "~>3.3.7"
+gem "middleman-autoprefixer"
 gem "middleman-livereload", "~> 3.1.0"
 gem "redcarpet"
 gem "sanitize"

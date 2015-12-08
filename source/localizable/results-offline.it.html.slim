@@ -1,0 +1,21 @@
+---
+title: Risultato osservazione
+---
+
+- app_url_facebook     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
+- app_url     = CGI.escape('http://www.alphaobservatory.org/prima-inchiesta/?shared=1')
+- picture     = CGI.escape("http://www.alphaobservatory.org/images/typologies/#{typology.image}")
+- name        = CGI.escape("Sono un tipo #{ typology.name }! E tu che tipo sei?!")
+- description = CGI.escape(typology.description)
+
+- url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
+
+
+div: .wrap
+  .grid
+    .grid__item
+      h1.huge Sei un tipo #{typology.name.downcase}!
+
+    .grid__item.lap-7-12
+      p.gamma
+        = typology.description

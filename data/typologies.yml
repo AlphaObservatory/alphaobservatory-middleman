@@ -1,42 +1,52 @@
+---
 -
-  slug: "tipo1"
-  name: "Ricercatore"
-  image: 1.jpg
-  description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
+  en:
+    -
+      slug: "tipo1"
+      name: "Ricercatore"
+      image: 1.jpg
+      description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
 
--
-  slug: "tipo2"
-  name: "Nonviolento"
-  image: 2.jpg
-  description: "Sei contro la violenza, ma la società va cambiata perché non sopporti le ingiustizie. Riflessivo oltre le apparenze, ti piace stare in mezzo alle persone più diverse e sei pronto a discutere su qualsiasi argomento. La vita è… realizzare giorno dopo giorno i propri sogni!"
+  it:
+    -
+      slug: "tipo1"
+      name: "Ricercatore"
+      image: 1.jpg
+      description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
 
--
-  slug: "tipo3"
-  name: "Attivista"
-  image: 3.jpg
-  description: "Non sopporti l'ingiustizia, lo sfruttamento e la manipolazione. Inflessibile nei principi, ami stare in mezzo agli altri ed ideare con i tuoi compagni nuovi progetti di azione. Riflessivo e intraprendente, pensi sempre con la tua testa. La vita è… lottare per un mondo migliore!"
+    -
+      slug: "tipo2"
+      name: "Nonviolento"
+      image: 2.jpg
+      description: "Sei contro la violenza, ma la società va cambiata perché non sopporti le ingiustizie. Riflessivo oltre le apparenze, ti piace stare in mezzo alle persone più diverse e sei pronto a discutere su qualsiasi argomento. La vita è… realizzare giorno dopo giorno i propri sogni!"
 
--
-  slug: "tipo4"
-  name: "Pacifista"
-  image: 4.jpg
-  description: "Sensibile oltremodo, sogni una società di uguaglianza e comunione. Le regole ti stanno strette e per te è sacrosanto che tutti possano esprimersi e dire la loro. Non faresti male a una mosca e sei disponibile verso tutti. La vita è… aspirare ad una crescente armonia!"
+    -
+      slug: "tipo3"
+      name: "Attivista"
+      image: 3.jpg
+      description: "Non sopporti l'ingiustizia, lo sfruttamento e la manipolazione. Inflessibile nei principi, ami stare in mezzo agli altri ed ideare con i tuoi compagni nuovi progetti di azione. Riflessivo e intraprendente, pensi sempre con la tua testa. La vita è… lottare per un mondo migliore!"
 
--
-  slug: "tipo5"
-  name: "Solitario"
-  image: 5.jpg
-  description: "Ami la solitudine e la tranquillità, la sofferenza degli altri ti turba. Il mondo andrebbe cambiato, ma è difficile. Pretendi il rispetto per la libertà, per questo servono le regole. Apprezzi la semplicità della vita e le complicazioni non fanno per te. La vita è… godersi i piaceri della vita!"
+    -
+      slug: "tipo4"
+      name: "Pacifista"
+      image: 4.jpg
+      description: "Sensibile oltremodo, sogni una società di uguaglianza e comunione. Le regole ti stanno strette e per te è sacrosanto che tutti possano esprimersi e dire la loro. Non faresti male a una mosca e sei disponibile verso tutti. La vita è… aspirare ad una crescente armonia!"
 
--
-  slug: "tipo6"
-  name: "Disilluso"
-  image: 6.jpg
-  description: "Questo mondo è una giungla e le fregature stanno dietro ogni angolo. Non ti fidi mai fino in fondo degli altri, e fai bene, perché nessuno ti capisce. Ti piace stare nel tuo mondo sognando la persona giusta con cui condividerlo. La vita è… i più furbi hanno sempre la meglio!"
+    -
+      slug: "tipo5"
+      name: "Solitario"
+      image: 5.jpg
+      description: "Ami la solitudine e la tranquillità, la sofferenza degli altri ti turba. Il mondo andrebbe cambiato, ma è difficile. Pretendi il rispetto per la libertà, per questo servono le regole. Apprezzi la semplicità della vita e le complicazioni non fanno per te. La vita è… godersi i piaceri della vita!"
 
--
-  slug: "tipo7"
-  name: "Autoritario"
-  image: 7.jpg
-  description: "C’è troppa libertà in questo mondo di delinquenti e nulla facenti. Ti piace l’ordine e usare il pugno duro quando serve. Orgoglioso di quello che hai costruito, se tutti facessero come te e ognuno stesse al suo posto le cose andrebbero meglio. La vita è… dare un esempio da seguire!"
+    -
+      slug: "tipo6"
+      name: "Disilluso"
+      image: 6.jpg
+      description: "Questo mondo è una giungla e le fregature stanno dietro ogni angolo. Non ti fidi mai fino in fondo degli altri, e fai bene, perché nessuno ti capisce. Ti piace stare nel tuo mondo sognando la persona giusta con cui condividerlo. La vita è… i più furbi hanno sempre la meglio!"
+
+    -
+      slug: "tipo7"
+      name: "Autoritario"
+      image: 7.jpg
+      description: "C’è troppa libertà in questo mondo di delinquenti e nulla facenti. Ti piace l’ordine e usare il pugno duro quando serve. Orgoglioso di quello che hai costruito, se tutti facessero come te e ognuno stesse al suo posto le cose andrebbero meglio. La vita è… dare un esempio da seguire!"
 
