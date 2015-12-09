@@ -13,15 +13,15 @@ javascript:
   };
 
 - app_url_facebook     = CGI.escape('https://www.facebook.com/pages/Osservatorio-ALPHA/487237421441167?sk=app_206429986046631')
-- app_url     = CGI.escape('http://www.alphaobservatory.org/prima-inchiesta/?shared=1')
+- app_url     = CGI.escape("http://www.alphaobservatory.org/#{I18n.locale}/?shared=1")
 - picture     = CGI.escape("http://www.alphaobservatory.org/images/typologies/#{typology.image}")
-- name        = CGI.escape("Sono un tipo #{ typology.name }! E tu che tipo sei?!")
+- name        = CGI.escape(t("result.facebook_title", tipo: typology.name.downcase))
 - description = CGI.escape(typology.description)
 
 - url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
 
-- name_quiz        = CGI.escape("E tu che tipo sei?!")
-- description_quiz = CGI.escape("Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!")
+- name_quiz        = CGI.escape(t("result.facebook_title"))
+- description_quiz = CGI.escape(t("result.invite_text"))
 - picture_quiz     = CGI.escape("http://www.alphaobservatory.org/images/3-doors.jpg")
 - url_quiz = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http://www.alphaobservatory.org/&description=#{ description_quiz }&redirect_uri=http://facebook.com/"
 
@@ -30,7 +30,8 @@ javascript:
 .result-page: .wrap
   .grid
     .grid__item
-      h1.huge Sei un tipo #{typology.name.downcase}!
+      h1.huge = t("result.title", tipo: typology.name.downcase)
+
 
     .grid__item.lap-5-12
       .result__image.align--center
@@ -42,16 +43,13 @@ javascript:
 
     .grid__item.lap-6-12
       .space--top-2.align--center
-        .space--both-2: h3.beta Condividi che tipo sei con i tuoi amici!
-        a.js-fb-share class="button--facebook" target="_blank" href=url Share on facebook
+        .space--both-2: h3.beta = t("result.share_profile")
+        a.js-fb-share class="button--facebook" target="_blank" href=url = t("result.fb_button_label")
 
     .grid__item.lap-6-12
       .space--top-2.align--center
-        .space--both-2: h3.beta Oppure invitali a fare questo quiz!
-        .addthis_sharing_toolbox data-url="http://www.alphaobservatory.org" data-title="Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!"
-
-
-
+        .space--both-2: h3.beta = t("result.invite_title")
+        .addthis_sharing_toolbox data-url=app_url data-title=t("result.invite_text")
 
 
 javascript:

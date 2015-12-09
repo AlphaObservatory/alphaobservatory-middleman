@@ -1,8 +1,9 @@
 ---
 it:
-  paths:
-      participate: "participate"
-      info: "info"
-      archive: "documents"
-
-
+  result:
+    title: "Sei un tipo %{tipo}!"
+    share_profile: "Condividi che tipo sei con i tuoi amici!"
+    fb_button_label: "Share on facebook"
+    invite_title: "Oppure invitali a fare questo quiz!"
+    invite_text: "Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!"
+    facebook_title: "Sono un tipo %{tipo}! E tu che tipo sei?!"

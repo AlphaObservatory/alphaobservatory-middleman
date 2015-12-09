@@ -24,19 +24,17 @@ activate :directory_indexes
 langs.each do |l|
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
-      proxy "/#{l}/#{t.slug}.html", "/results.#{l}.html", :ignore => true, :locals => { :typology => t}, locale: l
-      # page "/#{l}/#{t.slug}.html", :proxy => "/results.#{l}.html", :ignore => true, :locals => { :typology => t}
+      proxy "/#{l}/#{t.slug}.html", "/results.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
     end
   end
-  ignore "/results.#{l}.html"
+  # ignore "/results.html"
 
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
-      proxy "/#{l}/#{t.slug}-offline.html", "/results-offline.#{l}.html", :ignore => true, :locals => { :typology => t}, locale: l
-      # page "/#{l}/#{t.slug}-offline.html", :proxy => "/results-offline.#{l}.html", :ignore => true, :locals => { :typology => t}
+      proxy "/#{l}/#{t.slug}-offline.html", "/results-offline.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
     end
   end
-  ignore "/results-offline.#{l}.html"
+  # ignore "/results-offline.#{l}.html"
 end
 
 

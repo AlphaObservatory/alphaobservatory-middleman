@@ -1,8 +1,9 @@
 ---
 en:
-  paths:
-      participate: "participate"
-      info: "info"
-      archive: "documents"
-
-
+  result:
+    title: "You are a %{tipo}!"
+    share_profile: "Share your profile with your friends!"
+    fb_button_label: "Share on facebook"
+    invite_title: "Or invite'em to make this test!"
+    invite_text: "I've just partcipate to a Worldwide Research made for the new generations. Your turn now!"
+    facebook_title: "I'm a %{tipo}! What about you?!"

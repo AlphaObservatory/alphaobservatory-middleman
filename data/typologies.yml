@@ -3,10 +3,9 @@
   en:
     -
       slug: "tipo1"
-      name: "Ricercatore"
+      name: "Researcher"
       image: 1.jpg
-      description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
-
+      description:  "Nonviolent, brave, sensitive and bla bla bla"
   it:
     -
       slug: "tipo1"
