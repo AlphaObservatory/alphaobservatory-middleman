@@ -1,5 +1,5 @@
 
-require_relative './lib/i18n'
+# require_relative './lib/i18n'
 
 activate :i18n, langs: [:en, :it], :mount_at_root => false
 
@@ -24,17 +24,19 @@ activate :directory_indexes
 langs.each do |l|
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
-      page "/#{l}/#{t.slug}.html", :proxy => "/localizable/results.#{l}.html", :ignore => true, :locals => { :typology => t}
+      proxy "/#{l}/#{t.slug}.html", "/results.#{l}.html", :ignore => true, :locals => { :typology => t}, locale: l
+      # page "/#{l}/#{t.slug}.html", :proxy => "/results.#{l}.html", :ignore => true, :locals => { :typology => t}
     end
   end
-  ignore "/localizable/results.#{l}.html"
+  ignore "/results.#{l}.html"
 
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
-      page "/#{l}/#{t.slug}-offline.html", :proxy => "/localizable/results-offline.#{l}.html", :ignore => true, :locals => { :typology => t}
+      proxy "/#{l}/#{t.slug}-offline.html", "/results-offline.#{l}.html", :ignore => true, :locals => { :typology => t}, locale: l
+      # page "/#{l}/#{t.slug}-offline.html", :proxy => "/results-offline.#{l}.html", :ignore => true, :locals => { :typology => t}
     end
   end
-  ignore "/localizable/results-offline.#{l}.html"
+  ignore "/results-offline.#{l}.html"
 end
 
 
