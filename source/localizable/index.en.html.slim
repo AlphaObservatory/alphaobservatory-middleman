@@ -1,17 +1,22 @@
 ---
 title: Alpha Observatory
 ---
-.space--top-5
-.wrap
-  .grid
-    .grid__item.lap-3-12
-      = image_tag "logo.jpg", class: "logo"
-    .grid__item.lap-9-12
-      div
 
-        markdown:
-          <!-- www.123contactform.com script begins here -->
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+  = partial "main-menu"
 
-          <script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1693717.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
+  main.mdl-layout__content
+    .page-content.space--both-5
+      .wrap
+        .grid
+          .grid__item.lap-3-12
+            = image_tag "logo.jpg", class: "logo"
+          .grid__item.lap-9-12
+            div
 
-          <!-- www.123contactform.com script ends here -->
+              markdown:
+                <!-- www.123contactform.com script begins here -->
+
+                <script type="text/javascript">var servicedomain="www.123contactform.com"; var frmRef=''; try { frmRef=window.top.location.href; } catch(err) {}; var cfJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/includes/easyXDM.min.js' type='text/javascript'%3E%3C/script%3E")); frmRef=encodeURIComponent(frmRef).replace('%26','[%ANDCHAR%]'); document.write(unescape("%3Cscript src='" + cfJsHost + servicedomain + "/jsform-1693717.js?ref="+frmRef+"' type='text/javascript'%3E%3C/script%3E")); </script>
+
+                <!-- www.123contactform.com script ends here -->
