@@ -15,26 +15,18 @@ activate :livereload
 activate :syntax, line_numbers: false
 activate :directory_indexes
 
-
-# data.typologies.each do |t|
-#   proxy "/#{t.slug}.#{I18n.locale}.html", "/results.#{I18n.locale}.html", :locals => { :typology => t }
-# end
-# ignore "/localizable/results.#{I18n.locale}.html"
-
 langs.each do |l|
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
       proxy "/#{l}/#{t.slug}.html", "/results.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
     end
   end
-  # ignore "/results.html"
 
   data.typologies.each do |type_lang|
     type_lang[l.to_s].each do |t|
       proxy "/#{l}/#{t.slug}-offline.html", "/results-offline.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
     end
   end
-  # ignore "/results-offline.#{l}.html"
 end
 
 
