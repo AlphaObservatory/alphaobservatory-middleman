@@ -3,45 +3,45 @@
   en:
     -
       slug: "tipo1"
-      name: "Ricercatore"
+      name: "Searcher"
       image: 1.jpg
-      description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
+      description:  "Hardened nonviolent, resourceful and brave. Emotional and sensitive, you never jusge a book by the cover. Extremely curious, enthusiast for weightier topics. Far from being a naive person, easy answers don't suit you. Life is... an endless research... beyond all limits!"
 
     -
       slug: "tipo2"
-      name: "Nonviolento"
+      name: "Nonviolent"
       image: 2.jpg
-      description: "Sei contro la violenza, ma la società va cambiata perché non sopporti le ingiustizie. Riflessivo oltre le apparenze, ti piace stare in mezzo alle persone più diverse e sei pronto a discutere su qualsiasi argomento. La vita è… realizzare giorno dopo giorno i propri sogni!"
+      description: "You are against violence, but society must change because you can't stand injustice. Reflective about appearences, you like to socialize with people who are different from you and you are always open to the dialogue about any topic. Life is... fulfilling your dreams day by day!"
 
     -
       slug: "tipo3"
-      name: "Attivista"
+      name: "Activist"
       image: 3.jpg
-      description: "Non sopporti l'ingiustizia, lo sfruttamento e la manipolazione. Inflessibile nei principi, ami stare in mezzo agli altri ed ideare con i tuoi compagni nuovi progetti di azione. Riflessivo e intraprendente, pensi sempre con la tua testa. La vita è… lottare per un mondo migliore!"
+      description: "You can't stand injustice, exploitation and manipulation. Uncompromising about your principles, you love being with other people, making plans and starting new projects with your mates. Reflective and resourceful, you always have a mind of your own. Life is... struggling for a better world!"
 
     -
       slug: "tipo4"
-      name: "Pacifista"
+      name: "Pacifist"
       image: 4.jpg
-      description: "Sensibile oltremodo, sogni una società di uguaglianza e comunione. Le regole ti stanno strette e per te è sacrosanto che tutti possano esprimersi e dire la loro. Non faresti male a una mosca e sei disponibile verso tutti. La vita è… aspirare ad una crescente armonia!"
+      description: "Extremely emotional, you dream of a society made of equality and sharing. Rules don't suit you, all people is free to express themselves freely. You would never hurt a fly and you are always helpful to everybody. Life is... aiming for harmony!"
 
     -
       slug: "tipo5"
-      name: "Solitario"
+      name: "Loner"
       image: 5.jpg
-      description: "Ami la solitudine e la tranquillità, la sofferenza degli altri ti turba. Il mondo andrebbe cambiato, ma è difficile. Pretendi il rispetto per la libertà, per questo servono le regole. Apprezzi la semplicità della vita e le complicazioni non fanno per te. La vita è… godersi i piaceri della vita!"
+      description: "You like being on your own and tranquil, other people's suffering upsets you. The world should change, but it's so hard. You demand respect for freedom, this is why rules are necessary. You appreciate semplicity in life and complications don't suit you. Life is... enjoing the pleasures of life!"
 
     -
       slug: "tipo6"
-      name: "Disilluso"
+      name: "Disenchanted"
       image: 6.jpg
-      description: "Questo mondo è una giungla e le fregature stanno dietro ogni angolo. Non ti fidi mai fino in fondo degli altri, e fai bene, perché nessuno ti capisce. Ti piace stare nel tuo mondo sognando la persona giusta con cui condividerlo. La vita è… i più furbi hanno sempre la meglio!"
+      description: "This world is a jungle, scams are around every corner. You never really trust other people, and you're right, because nobody understands you. You like to be in your own world, dreaming about the right person to share it with. Life is... the slickest always wins!"
 
     -
       slug: "tipo7"
-      name: "Autoritario"
+      name: "Authoritarian"
       image: 7.jpg
-      description: "C’è troppa libertà in questo mondo di delinquenti e nulla facenti. Ti piace l’ordine e usare il pugno duro quando serve. Orgoglioso di quello che hai costruito, se tutti facessero come te e ognuno stesse al suo posto le cose andrebbero meglio. La vita è… dare un esempio da seguire!"
+      description: "There is too much freedom in this world made of deliquents and bums. You like order and using an iron hand when it's needed. Proud of all you have built in your life, if everybody did as you do and stayed at his place, things would be much better. Life is... giving the example to follow!"
 
   it:
     -
