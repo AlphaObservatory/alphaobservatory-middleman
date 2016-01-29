@@ -7,7 +7,8 @@ en:
     invite_title: "Or invite them to make this test!"
     invite_text: "I've just participated to a Worldwide Research about New Generations. It's your turn now!"
     facebook_title: "I'm the %{tipo} type! What about you?!"
+    facebook_page: "https://www.facebook.com/ALPHA-Observatory-959559297409621/"
   og:
-    title: "Which type are you? Find it out!"
+    title: "Do the test!"
     description: "Join the World Research about New Generations"
     url: "http://www.alphaobservatory.org/en/"

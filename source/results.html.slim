@@ -17,13 +17,26 @@ javascript:
 - picture     = CGI.escape("http://www.alphaobservatory.org/images/typologies/#{typology.image}")
 - name        = CGI.escape(t("result.facebook_title", tipo: typology.name.downcase))
 - description = CGI.escape(typology.description)
+- facebook_page = t("result.facebook_page")
 
 - url = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=#{ app_url }&picture=#{ picture }&name=#{ name }&description=#{ description }&redirect_uri=http://facebook.com/"
 
 - name_quiz        = CGI.escape(t("result.facebook_title"))
 - description_quiz = CGI.escape(t("result.invite_text"))
-- picture_quiz     = CGI.escape("http://www.alphaobservatory.org/images/3-doors.jpg")
+- picture_quiz     = CGI.escape("https://dl.dropboxusercontent.com/u/4153617/Foto%20Osservatorio%20Alpha%20per%20FB/condivisioneFB.jpg")
 - url_quiz = "https://www.facebook.com/dialog/feed?app_id=1462324664061074&link=http://www.alphaobservatory.org/&description=#{ description_quiz }&redirect_uri=http://facebook.com/"
+
+
+#fb-root
+javascript:
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
 
 .result-page__bg style="background-image: url(/images/typologies/small/#{typology.image}"
 
@@ -50,6 +63,10 @@ javascript:
       .space--top-2.align--center
         .space--both-2: h3.beta = t("result.invite_title")
         .addthis_sharing_toolbox data-url=app_url data-title=t("result.invite_text")
+
+    .grid__item.lap-12-12
+      .space--top-5.align--center
+        div class="fb-like" data-href="#{facebook_page}" data-width="320px" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"
 
 
 javascript:
