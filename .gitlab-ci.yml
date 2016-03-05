@@ -1,0 +1,10 @@
+build:
+  script:
+    - source /root/.nvm/nvm.sh > /dev/null 2>&1
+    - nvm use stable
+    - rbenv global 2.2.2
+    - bundle install --deployment --quiet --path /cache
+    - rbenv rehash
+    - ./deploy
+  only:
+    - master
