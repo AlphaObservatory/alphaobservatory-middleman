@@ -30,6 +30,8 @@ langs.each do |l|
 end
 
 
+#r
+
 activate :dato,
   domain: 'admin.alphaobservatory.org',
   token: "6336ab2933f064d4649df76ed97a92b3",
