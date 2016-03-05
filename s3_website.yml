@@ -23,6 +23,7 @@ exclude_from_upload:
   - node_modules
   - vendor
 
+cloudfront_invalidate_root: true
 concurrency_level: 5
 
 s3_id: AKIAJOFOB5QTMN4KVIHA
