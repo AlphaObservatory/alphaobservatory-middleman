@@ -15,6 +15,9 @@ gem "sass-globbing"
 gem "slim"
 gem "s3_website"
 gem "truncate"
+gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-normalize-scss'
