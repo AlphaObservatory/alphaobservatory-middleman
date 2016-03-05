@@ -30,6 +30,13 @@ langs.each do |l|
 end
 
 
+activate :dato,
+  domain: 'admin.alphaobservatory.org',
+  token: "6336ab2933f064d4649df76ed97a92b3",
+  base_url: 'www.alphaobservatory.org'
+set :url_root, 'www.alphaobservatory.org/'
+
+
 
 
 activate :autoprefixer do |config|
