@@ -29,13 +29,24 @@ langs.each do |l|
   end
 end
 
-# ddd
+# DATO
+##################################
 
 activate :dato,
   domain: 'admin.alphaobservatory.org',
   token: "6336ab2933f064d4649df76ed97a92b3",
   base_url: 'www.alphaobservatory.org'
 set :url_root, 'www.alphaobservatory.org/'
+
+
+dato.news_its.values.each do |article|
+  proxy "/it/news/#{article.slug}.html", "/news_template.html", locals: { article: article}
+end
+ignore "/news_template.html.slim"
+
+
+
+# ACTIVATES
 
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 8']
