@@ -16,7 +16,11 @@ main.mdl-layout__content
           h1 = article.title
 
         .grid--center: .grid__item.lap-8-12
+          .space--bottom-2
+            h2.gamma = article.abstract
+
           .formatted-content.space--both-2
+
             .space--bottom-2
               img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
             = article.body
