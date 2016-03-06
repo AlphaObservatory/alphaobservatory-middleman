@@ -1,4 +1,23 @@
-.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-  = partial "main-menu"
+---
+title: Alpha Observatory
+---
 
-h1 = article.to_yaml
+= partial "main-menu"
+
+main.mdl-layout__content
+  .page-content.space--both-5
+    .wrap
+      article
+        header
+          p
+            span =' article.date.strftime("Pubblicato il %d %B %Y")
+            ' -
+            span = link_to "indice delle news", "/it/news/"
+          h1 = article.title
+
+        .grid--center: .grid__item.lap-8-12
+          .formatted-content.space--both-2
+            .space--bottom-2
+              img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
+            = article.body
+

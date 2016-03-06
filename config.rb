@@ -42,6 +42,9 @@ set :url_root, 'www.alphaobservatory.org/'
 dato.news_its.values.each do |article|
   proxy "/it/news/#{article.slug}.html", "/news_template.html", locals: { article: article}
 end
+dato.news_ens.values.each do |article|
+  proxy "/en/news/#{article.slug}.html", "/news_template.html", locals: { article: article}
+end
 ignore "/news_template.html.slim"
 
 
