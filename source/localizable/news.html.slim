@@ -10,7 +10,7 @@ main.mdl-layout__content
       h1 news
 
       .grid
-        - dato.news_its.values.sort_by(&:date).each do |n|
+        - dato.news_its.values.sort_by(&:date).reverse.each do |n|
           .grid__item.lap-6-12.desk-4-12
             .demo-card-wide.mdl-card.mdl-shadow--2dp.news-box
               .mdl-card__title.news-box__title style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
