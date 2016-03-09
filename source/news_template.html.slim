@@ -25,3 +25,10 @@ main.mdl-layout__content
               img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
             = article.body
 
+          .gallery
+            - dato.news_its[article.id].gallery.each do |g|
+              .gallery__item.space--both-2
+                figure
+                  img src=g.image.file.width(600).format("jpg").to_url
+                  figcaption: em g.description
+
