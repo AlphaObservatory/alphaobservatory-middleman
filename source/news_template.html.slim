@@ -29,6 +29,6 @@ main.mdl-layout__content
             - dato.news_its[article.id].gallery.each do |g|
               .gallery__item.space--both-2
                 figure
-                  img src=g.image.file.width(600).format("jpg").to_url
+                  img src=g.image.file.width(600).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
                   figcaption: em = g.description
 
