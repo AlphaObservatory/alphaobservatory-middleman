@@ -12,16 +12,11 @@ html
     meta property="og:description" content=t("og.description")
     meta property="og:url" content=t("og.url")
 
-    = stylesheet_link_tag "themes/material"
     = stylesheet_link_tag "application"
     = partial "js_includes"
-
-    link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"
-    script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"
-    link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
 
   body
 
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-565cc4d69ba84da3" async="async"></script>
-    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-      = yield
+
+    = yield

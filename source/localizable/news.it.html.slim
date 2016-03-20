@@ -4,29 +4,43 @@ title: Alpha Observatory
 
 = partial "main-menu"
 
-main.mdl-layout__content
-  .page-content.space--both-5
+main
+  .page-header
+    .wrap.page-header__inner
+      h1.page-header__title News
+      p.page-header__subtitle Aggiornamenti dal mondo
+
+  section.news
     .wrap
-      h1 news
-
       .grid
-        - dato.news_its.values.sort_by(&:date).reverse.each do |n|
-          .grid__item.lap-6-12.desk-4-12
-            .demo-card-wide.mdl-card.mdl-shadow--2dp.news-box
-              .mdl-card__title.news-box__title style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
-              .mdl-card__supporting-text
-                p = n.date
-                h3.mdl-card__title-text = link_to n.title, "/it/news/#{n.slug}/"
-                = n.abstract
+        .grid__item.width-8-12
+          .news__inner
+            - dato.news_its.values.sort_by(&:date).reverse.each do |n|
+                .grid__item.width-2-12.visible--on-desk
+                  .news__date
+                    .fancy-date
+                      .fancy-date__circle
+                        .fancy-date__m = I18n.l n.date, format: "%B"
+                        .fancy-date__d = n.date.strftime("%e")
+                        .fancy-date__y = n.date.strftime("%Y")
 
-              .mdl-card__actions.mdl-card--border
-                = link_to "leggi", "/it/news/#{n.slug}/", class: "mdl-button.mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-              .mdl-card__menu
-                button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
-                  i.material-icons share
+                .grid__item.width-10-12
+
+                  .news__body
+                    h2.news__title
+                      a href="/it/news/#{n.slug}/" = n.title
+                    .news__date__simple.hidden--on-desk
+                      = I18n.l n.date, format: "%d %B %Y"
 
 
+                    .news__image style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
 
+                    .news__abstract
+                      = n.abstract
 
+                    .news__actions.space--top-2
+                      a.button--primary.button--small href="/it/news/#{n.slug}/" leggi
 
+        .grid__item.width-4-12
+          aside aside
 

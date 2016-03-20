@@ -1,15 +1,19 @@
-header.mdl-layout__header
-  .mdl-layout__header-row
+header.header
+  .wrap
+    .or
+      .or__item
+        .header__logo
 
-    span.mdl-layout-title Alpha Observatory
-    .mdl-layout-spacer
-    nav.mdl-navigation.mdl-layout--large-screen-only
-      a.mdl-navigation__link href="/it/"  Italiano
-      a.mdl-navigation__link href="/en/"  English
+          span Alpha Observatory
+      .or__item
+        nav.nav
+          .nav__item: a href="/it/"  Italiano
+          .nav__item: a href="/en/"  English
 
-.mdl-layout__drawer
-  span.mdl-layout-title Alpha Observatory
-  nav.mdl-navigation
-    a.mdl-navigation__link href="/it/"  Italiano
-    a.mdl-navigation__link href="/en/"  English
+  /
+    .mdl-layout__drawer
+      span.mdl-layout-title Alpha Observatory
+      nav.mdl-navigation
+        a.mdl-navigation__link href="/it/"  Italiano
+        a.mdl-navigation__link href="/en/"  English
 

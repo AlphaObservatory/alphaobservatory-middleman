@@ -1,0 +1,34 @@
+.news
+  background-color: $light-body-color
+  a
+    text-decoration: none
+
+.news__inner
+  +vertical-padding(2)
+
+.news__body
+  display: block
+  border-bottom: 1px dotted $black-color
+  +vertical-padding(2)
+  +margin-bottom(3)
+
+.news__title
+  +font-size(alpha)
+  +heading-font-family
+
+.news__image
+  border: 1px dotted $black-color
+  +vertical-margin(1)
+  height: 236px
+  background-size: cover !important
+  background-repeat: no-repeat !important
+  background-position: center
+
+.news__abstract
+  +heading-font-family
+  +font-size(gamma)
+  font-style: italic
+
+.news__actions
+  text-align: right
+

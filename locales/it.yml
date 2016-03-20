@@ -12,3 +12,10 @@ it:
     title: "Fai il test!"
     description: "Partecipa alla Ricerca Mondiale sulle Nuove Generazioni."
     url: "http://www.alphaobservatory.org/it/"
+
+  defaults: &defaults
+    month_names:
+      [~, Gennaio, Febbraio, Marzo, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    formats:
+       default: "%d. %B %Y"
+       month: "%B"

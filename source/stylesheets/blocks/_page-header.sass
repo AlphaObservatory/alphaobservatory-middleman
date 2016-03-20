@@ -1,0 +1,22 @@
+.page-header
+  position: relative
+
+  &:before
+    content: ""
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.page-header__inner
+  +vertical-padding(5)
+
+.page-header__title
+  +font-size(huge)
+
+.page-header__subtitle
+  +font-size(gamma)
+  +heading-font-family
+
