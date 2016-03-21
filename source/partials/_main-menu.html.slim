@@ -5,11 +5,11 @@ header.header
         .header__logo
           a href="/#{I18n.locale}"
             = image_tag "logo.jpg"
-          span Alpha Observatory
+          span.visible--on-desk Alpha Observatory
       .or__item
         nav.nav
           .nav__item: a href="/#{I18n.locale}/news/" News
-          .nav__item--divider: span |
+          .nav__item--divider.visible--on-desk: span |
+          div.hidden--on-desk
           .nav__item: a href="/it/"  Italiano
           .nav__item: a href="/en/"  English
-
