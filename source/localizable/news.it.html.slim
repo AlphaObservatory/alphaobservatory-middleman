@@ -16,7 +16,7 @@ main
   section.news
     .wrap
       .grid
-        .grid__item.width-8-12
+        .grid__item.desk-8-12
           .news__inner
             - dato.news_its.values.sort_by(&:date).reverse.each do |n|
                 .grid__item.width-2-12.visible--on-desk
@@ -39,7 +39,7 @@ main
                     .news__actions.space--top-2
                       a.button--primary.button--small href="/it/news/#{n.slug}/" = t("news.read_more")
 
-        .grid__item.width-4-12
+        .grid__item.desk-4-12.visible--on-desk
           aside
 
 
