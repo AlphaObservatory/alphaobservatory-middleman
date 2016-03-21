@@ -40,10 +40,16 @@ set :url_root, 'www.alphaobservatory.org/'
 
 
 dato.news_its.values.each do |article|
-  proxy "/it/news/#{article.slug}.html", "/news_template.html", locals: { article: article}
+  proxy "/it/news/#{article.slug}.html", "/news_template.html", locals: { article: article, lang: :it} do
+    ::I18n.locale = :it
+    @lang         = :it
+  end
 end
 dato.news_ens.values.each do |article|
-  proxy "/en/news/#{article.slug}.html", "/news_template.html", locals: { article: article}
+  proxy "/en/news/#{article.slug}.html", "/news_template.html", locals: { article: article}  do
+    ::I18n.locale = :en
+    @lang         = :en
+  end
 end
 ignore "/news_template.html.slim"
 

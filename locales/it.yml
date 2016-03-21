@@ -14,8 +14,14 @@ it:
     url: "http://www.alphaobservatory.org/it/"
 
   defaults: &defaults
+    day_names:
+      [~, Lunedì, Martedì, Mercoledì, Giovedì, Venerdì, Sabato, Domenica]
     month_names:
-      [~, Gennaio, Febbraio, Marzo, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+      [~, Gennaio, Febbraio, Marzo, Apria, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
     formats:
        default: "%d. %B %Y"
-       month: "%B"
+
+  news:
+    title: "News"
+    subtitle: "Aggiornamenti sul progetto"
+    read_more: "leggi..."

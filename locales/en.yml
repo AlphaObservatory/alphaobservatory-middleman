@@ -12,3 +12,7 @@ en:
     title: "Do the test!"
     description: "Join the World Research about New Generations"
     url: "http://www.alphaobservatory.org/en/"
+  news:
+    title: "News"
+    subtitle: "Updates about the project"
+    read_more: "read..."

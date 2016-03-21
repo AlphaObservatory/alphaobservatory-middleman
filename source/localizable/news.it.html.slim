@@ -1,5 +1,8 @@
 ---
-title: Alpha Observatory
+title: Notizie sul progetto | Alpha Observatory
+seo:
+  title: Notizie sul progetto | Alpha Observatory
+
 ---
 
 = partial "main-menu"
@@ -7,8 +10,8 @@ title: Alpha Observatory
 main
   .page-header
     .wrap.page-header__inner
-      h1.page-header__title News
-      p.page-header__subtitle Aggiornamenti dal mondo
+      h1.page-header__title  = t("news.title")
+      p.page-header__subtitle  = t("news.subtitle")
 
   section.news
     .wrap
@@ -18,12 +21,7 @@ main
             - dato.news_its.values.sort_by(&:date).reverse.each do |n|
                 .grid__item.width-2-12.visible--on-desk
                   .news__date
-                    .fancy-date
-                      .fancy-date__circle
-                        .fancy-date__m = I18n.l n.date, format: "%B"
-                        .fancy-date__d = n.date.strftime("%e")
-                        .fancy-date__y = n.date.strftime("%Y")
-
+                    = partial "fancy-date", locals: { date: n.date}
                 .grid__item.width-10-12
 
                   .news__body
@@ -33,14 +31,15 @@ main
                       = I18n.l n.date, format: "%d %B %Y"
 
 
-                    .news__image style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
+                    .news__image style="background: url(#{n.image.file.width(600).height(200).format("jpg").fit("crop").to_url}); center / cover"
 
                     .news__abstract
                       = n.abstract
 
                     .news__actions.space--top-2
-                      a.button--primary.button--small href="/it/news/#{n.slug}/" leggi
+                      a.button--primary.button--small href="/it/news/#{n.slug}/" = t("news.read_more")
 
         .grid__item.width-4-12
-          aside aside
+          aside
+
 

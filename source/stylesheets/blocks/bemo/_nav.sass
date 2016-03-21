@@ -18,6 +18,10 @@
     text-decoration: none
     color: $base-body-color
 
+.nav__item--divider
+  @extend %nav-item
+  margin: 0 30px
+
 .nav--dots
   .nav__item:before
     content: "\00A0\2022\00A0"
@@ -50,6 +54,7 @@
   .nav__item--first,
   .nav__item--last
     padding: 0.4em
+
 
 +at-breakpoint(desk)
   .nav--expand

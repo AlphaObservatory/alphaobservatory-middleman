@@ -3,17 +3,13 @@ header.header
     .or
       .or__item
         .header__logo
-
+          a href="/#{I18n.locale}"
+            = image_tag "logo.jpg"
           span Alpha Observatory
       .or__item
         nav.nav
+          .nav__item: a href="/#{I18n.locale}/news/" News
+          .nav__item--divider: span |
           .nav__item: a href="/it/"  Italiano
           .nav__item: a href="/en/"  English
-
-  /
-    .mdl-layout__drawer
-      span.mdl-layout-title Alpha Observatory
-      nav.mdl-navigation
-        a.mdl-navigation__link href="/it/"  Italiano
-        a.mdl-navigation__link href="/en/"  English
 

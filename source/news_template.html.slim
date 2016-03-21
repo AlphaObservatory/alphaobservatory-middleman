@@ -4,31 +4,28 @@ title: Alpha Observatory
 
 = partial "main-menu"
 
-main.mdl-layout__content
-  .page-content.space--both-5
-    .wrap
-      article
-        header
-          p
-            span =' article.date.strftime("Pubblicato il %d %B %Y")
-            ' -
-            span = link_to "indice delle news", "/it/news/"
-          h1 = article.title
+article.article
+  .page-header
+    .wrap.page-header__inner
+      h1.page-header__title = article.title
+      .page-header__subtitle
+        == article.abstract
 
-        .grid--center: .grid__item.lap-8-12
-          .space--bottom-2
-            h2.gamma = article.abstract
+.wrap
+  .article__featured-image
+    img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
 
-          .formatted-content.space--both-2
+    .article__date
+      = partial "fancy-date", locals: { date: article.date }
 
-            .space--bottom-2
-              img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
-            = article.body
+  .grid--center: .grid__item.desk-8-12
+    .article__content.formatted-content
+      = article.body
 
-          .gallery
-            - dato.news_its[article.id].gallery.each do |g|
-              .gallery__item.space--both-2
-                figure
-                  img src=g.image.file.width(600).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
-                  figcaption: em = g.description
+    .article__gallery
+      - dato.news_its[article.id].gallery.each do |g|
+        .article__gallery__item
+          figure
+            img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
+            figcaption: em = g.description
 
