@@ -1,0 +1,27 @@
+---
+es:
+  result:
+    title: "Tu es un tipo %{tipo}!"
+    share_profile: "Condividi che tipo sei con i tuoi amici!"
+    fb_button_label: "Share on facebook"
+    invite_title: "Oppure invitali a fare questo quiz!"
+    invite_text: "Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!"
+    facebook_title: "Sono un tipo %{tipo}! E tu che tipo sei?!"
+    facebook_page: "https://www.facebook.com/osservatorioalpha/"
+  og:
+    title: "Hace el test!"
+    description: "Partecipa a la Ricerca Mondiale sulle Nuove Generazioni."
+    url: "http://www.alphaobservatory.org/es/"
+
+  defaults: &defaults
+    day_names:
+      [~, Lunes, Marte, Mercoledì, Giovedì, Venerdì, Sabato, Domenica]
+    month_names:
+      [~, Gennaio, Febbraio, Marzo, Apria, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+    formats:
+       default: "%d. %B %Y"
+
+  news:
+    title: "News"
+    subtitle: "Aggiornamenti sul progetto"
+    read_more: "leggi..."

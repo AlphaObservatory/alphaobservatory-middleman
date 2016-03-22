@@ -1,7 +1,7 @@
 
 # require_relative './lib/i18n'
 
-activate :i18n, langs: [:en, :it], :mount_at_root => false
+activate :i18n, langs: [:en, :it, :es], :mount_at_root => false
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
