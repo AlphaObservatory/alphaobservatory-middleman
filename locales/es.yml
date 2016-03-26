@@ -1,27 +1,27 @@
 ---
 es:
   result:
-    title: "Tu es un tipo %{tipo}!"
-    share_profile: "Condividi che tipo sei con i tuoi amici!"
+    title: "Eres un tipo %{tipo}!"
+    share_profile: "Comparte que tipo eres con tus amigos!"
     fb_button_label: "Share on facebook"
-    invite_title: "Oppure invitali a fare questo quiz!"
-    invite_text: "Ho appena partecipato a questa Ricerca Mondiale sulle Nuove Generazioni rivolta a milioni di giovani. Partecipa anche tu!"
-    facebook_title: "Sono un tipo %{tipo}! E tu che tipo sei?!"
-    facebook_page: "https://www.facebook.com/osservatorioalpha/"
+    invite_title: "Invita tus amigos a hacer esta encuesta!"
+    invite_text: "Acabo de participar a esta Investigación Mundial sobre las Nuevas Generaciones dirigida a millones de jovenes. Participa también tu!"
+    facebook_title: "Soy un tipo %{tipo}! ¿ Y tu, que tipo eres?"
+    facebook_page: "https://www.facebook.com/alphaobservatory/"
   og:
-    title: "Hace el test!"
-    description: "Partecipa a la Ricerca Mondiale sulle Nuove Generazioni."
+    title: "Haz el test!"
+    description: "Participa a la Investigación Mundial sobre las Nuevas Generaciones"
     url: "http://www.alphaobservatory.org/es/"
 
   defaults: &defaults
     day_names:
-      [~, Lunes, Marte, Mercoledì, Giovedì, Venerdì, Sabato, Domenica]
+      [~, Lunes, Martes, Miércoles, Jueves, Viernes, Sábado, Domingo]
     month_names:
-      [~, Gennaio, Febbraio, Marzo, Apria, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+      [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
     formats:
        default: "%d. %B %Y"
 
   news:
     title: "News"
-    subtitle: "Aggiornamenti sul progetto"
-    read_more: "leggi..."
+    subtitle: "Actualizaciones sobre el proyecto"
+    read_more: "lee..."

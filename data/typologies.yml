@@ -88,43 +88,43 @@
   es:
     -
       slug: "tipo1"
-      name: "Ricercator"
+      name: "Investigador"
       image: 1.jpg
-      description:  "Agguerrito nonviolento, intraprendente e coraggioso. Sensibile e attento, non giudichi mai dalle apparenze. Curioso insaziabile, appassionato dei massimi sistemi. Tutt'altro che ingenuo, le facili risposte non fanno per te. La vita è... una continua ricerca… senza limiti!"
+      description:  "¡Aguerrido no violento, atrevido y valiente. Sensible y atento, nunca juzgas por las apariencias. Curioso insaciable, apasionado de los máximos sistemas. De ninguna manera ingenuo, las faciles respuesta no son para ti. La vida es... una continua busqueda… sin límites!"
 
     -
       slug: "tipo2"
-      name: "Nonviolento"
+      name: "No violento"
       image: 2.jpg
-      description: "Sei contro la violenza, ma la società va cambiata perché non sopporti le ingiustizie. Riflessivo oltre le apparenze, ti piace stare in mezzo alle persone più diverse e sei pronto a discutere su qualsiasi argomento. La vita è… realizzare giorno dopo giorno i propri sogni!"
+      description: "¡Estás en contra de la violencia, pero quieres cambiar la sociedad porque no soportas las injusticias. Reflexivo mas allá de las apariencias, te gusta compartir con las personas mas diversas y estas listos en discutir sobre cualquier argumento. La vida es… realizar dia a dia tus sueños!"
 
     -
       slug: "tipo3"
       name: "Activista"
       image: 3.jpg
-      description: "Non sopporti l'ingiustizia, lo sfruttamento e la manipolazione. Inflessibile nei principi, ami stare in mezzo agli altri ed ideare con i tuoi compagni nuovi progetti di azione. Riflessivo e intraprendente, pensi sempre con la tua testa. La vita è… lottare per un mondo migliore!"
+      description: "¡No aguantas la injusticia, la esplotación y la manipulación. Inflexible en los principios, te gusta compartir con los demas y diseñar con tus compañeros nuevos proyectos de acción. Reflexivo y emprendendor, siempre piensas con tu cabeza. La vida es… luchar por un mundo mejor!"
 
     -
       slug: "tipo4"
       name: "Pacifista"
       image: 4.jpg
-      description: "Sensibile oltremodo, sogni una società di uguaglianza e comunione. Le regole ti stanno strette e per te è sacrosanto che tutti possano esprimersi e dire la loro. Non faresti male a una mosca e sei disponibile verso tutti. La vita è… aspirare ad una crescente armonia!"
+      description: "¡Sumamente sensible, sueñas una sociedad de igualdad y comunión. Las reglas te quedan muy ajustadas y para ti es sacrosanto que todos puedan expresarse y decir sus opiniones. Nunca perjudicarias alguien y eres disponible con todos. La vida es… aspirar a una creciente armonía!"
 
     -
       slug: "tipo5"
       name: "Solitario"
       image: 5.jpg
-      description: "Ami la solitudine e la tranquillità, la sofferenza degli altri ti turba. Il mondo andrebbe cambiato, ma è difficile. Pretendi il rispetto per la libertà, per questo servono le regole. Apprezzi la semplicità della vita e le complicazioni non fanno per te. La vita è… godersi i piaceri della vita!"
+      description: "¡Te gusta mucho la soledad y la tranquilidad; te inquieta el sufrimiento de los demas. Se deberia cambiar el mundo, pero es dificil. Pretendes respeto por la libertad, por esto sirven las reglas. Valoras la sencillez de la vida y las complicaciones no son para ti. La vida es… gozar de los placeres de la vida!"
 
     -
       slug: "tipo6"
-      name: "Disilluso"
+      name: "Desilusionado"
       image: 6.jpg
-      description: "Questo mondo è una giungla e le fregature stanno dietro ogni angolo. Non ti fidi mai fino in fondo degli altri, e fai bene, perché nessuno ti capisce. Ti piace stare nel tuo mondo sognando la persona giusta con cui condividerlo. La vita è… i più furbi hanno sempre la meglio!"
+      description: "¡Este mundo es una jungla y las trampas estan a la vuelta de cada esquina. Nunca confías totalmente en los demas, y tienes razon, porque nadie te entiende. Te gusta vivir en tu mundo sueñando la persona justa con que compartirlo. La vida es… los mas listos tienen siempre la sartén por el mango!"
 
     -
       slug: "tipo7"
       name: "Autoritario"
       image: 7.jpg
-      description: "C’è troppa libertà in questo mondo di delinquenti e nulla facenti. Ti piace l’ordine e usare il pugno duro quando serve. Orgoglioso di quello che hai costruito, se tutti facessero come te e ognuno stesse al suo posto le cose andrebbero meglio. La vita è… dare un esempio da seguire!"
+      description: "¡Hay demasiada libertad en este mundo de delincuentes y perezosos. Te gusta el orden y utilizar el puño duro cuando sirve. Orgulloso de lo que has construido, si todos harian como ti y cadauno estuviera en su lugar, las cosas marcharian mejor. La vida es… ser un ejemplo a seguir!"
 
