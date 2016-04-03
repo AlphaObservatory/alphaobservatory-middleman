@@ -1,5 +1,7 @@
 ---
 en:
+  survey: "Survey"
+
   result:
     title: "You are the %{tipo} type!"
     share_profile: "Share your profile with your friends!"

@@ -1,5 +1,8 @@
 ---
 it:
+  survey: "Inchiesta"
+
+
   result:
     title: "Sei un tipo %{tipo}!"
     share_profile: "Condividi che tipo sei con i tuoi amici!"
