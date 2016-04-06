@@ -9,9 +9,9 @@ header.header
       .or__item
         nav.nav
           .nav__item: a href="/#{I18n.locale}/" = t("survey")
-          .nav__item: a href="/#{I18n.locale}/news/" News
+          - if not current_page.url == "/it/" || current_page.url == "/en/"
+            .nav__item: a href="/#{I18n.locale}/news/" News
           .nav__item--divider.visible--on-desk: span |
-          / div.hidden--on-desk
 
           - if current_page.url == "/it/" || current_page.url == "/en/"
             .nav__item: a href="/it/" Italiano
