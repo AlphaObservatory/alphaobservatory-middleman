@@ -30,8 +30,8 @@ main
                     .news__date__simple.hidden--on-desk
                       = I18n.l n.date, format: "%d %B %Y"
 
-
-                    .news__image style="background: url(#{n.image.file.width(600).height(200).format("jpg").fit("crop").to_url}); center / cover"
+                    - if n.image.present?
+                      .news__image style="background: url(#{n.image.file.width(600).height(200).format("jpg").fit("crop").to_url}); center / cover"
 
                     .news__abstract
                       = n.abstract

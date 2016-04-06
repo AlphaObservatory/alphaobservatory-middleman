@@ -10,20 +10,20 @@ main.mdl-layout__content
       h1 news
 
       .grid
-        - dato.news_ens.values.sort_by(&:date).reverse.each do |n|
-          .grid__item.lap-6-12.desk-4-12
-            .demo-card-wide.mdl-card.mdl-shadow--2dp.news-box
-              .mdl-card__title.news-box__title style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
-                h2.mdl-card__title-text = link_to n.title, "/en/news/#{n.slug}/"
-              .mdl-card__supporting-text
-                p = n.date
-                = n.abstract
+        / - dato.news_ens.values.sort_by(&:date).reverse.each do |n|
+        /   .grid__item.lap-6-12.desk-4-12
+        /     .demo-card-wide.mdl-card.mdl-shadow--2dp.news-box
+        /       .mdl-card__title.news-box__title style="background: url(#{n.image.file.width(300).height(176).format("jpg").fit("crop").to_url}); center / cover"
+        /         h2.mdl-card__title-text = link_to n.title, "/en/news/#{n.slug}/"
+        /       .mdl-card__supporting-text
+        /         p = n.date
+        /         = n.abstract
 
-              .mdl-card__actions.mdl-card--border
-                = link_to "read more...", "/en/news/#{n.slug}/", class: "mdl-button.mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-              .mdl-card__menu
-                button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
-                  i.material-icons share
+        /       .mdl-card__actions.mdl-card--border
+        /         = link_to "read more...", "/en/news/#{n.slug}/", class: "mdl-button.mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+        /       .mdl-card__menu
+        /         button.mdl-button.mdl-button--icon.mdl-js-button.mdl-js-ripple-effect
+        /           i.material-icons share
 
 
 

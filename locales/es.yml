@@ -1,6 +1,6 @@
 ---
 es:
-  survey: "Encuestad"
+  survey: "Encuesta"
   result:
     title: "Eres un tipo %{tipo}!"
     share_profile: "Comparte que tipo eres con tus amigos!"

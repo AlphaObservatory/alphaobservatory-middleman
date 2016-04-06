@@ -9,23 +9,31 @@ article.article
     .wrap.page-header__inner
       h1.page-header__title = article.title
       .page-header__subtitle
-        == article.abstract
+        = article.abstract
 
 .wrap
   .article__featured-image
-    img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
+    - if article.image.present?
+      img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
 
     .article__date
       = partial "fancy-date", locals: { date: article.date }
 
   .grid--center: .grid__item.desk-8-12
-    .article__content.formatted-content
+    .article__content.formatted-content    
       = article.body
-
-    .article__gallery
-      - dato.news_its[article.id].gallery.each do |g|
-        .article__gallery__item
-          figure
-            img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
-            figcaption: em = g.description
-
+  
+    - if I18n.locale == :it && dato.news_its[article.id].gallery.any?
+      .article__gallery
+        - dato.news_its[article.id].gallery.each do |g|
+          .article__gallery__item
+            figure
+              img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
+              figcaption: em = g.description
+    - elsif I18n.locale == :en && dato.news_ens[article.id].gallery.any?
+      .article__gallery
+        - dato.news_ens[article.id].gallery.each do |g|
+          .article__gallery__item
+            figure
+              img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
+              figcaption: em = g.description
