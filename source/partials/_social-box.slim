@@ -1,0 +1,10 @@
+ruby:
+- title ||= "Social"
+- fb_link ||= "https://www.facebook.com/alphaobservatory/"
+
+.social-box
+  .space--both-2: .gamma: .social-box__title = title
+  .space--bottom-1
+    = link_to "Facebook",fb_link ,class:"social-box__link"
+  .space--bottom-1
+    = link_to "Youtube","https://www.youtube.com/channel/UC7AwdUpQjRiO4B1ojxOtEIg" ,class:"social-box__link"
