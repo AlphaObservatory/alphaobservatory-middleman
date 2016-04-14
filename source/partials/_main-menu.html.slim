@@ -9,13 +9,15 @@ header.header
       .or__item
         nav.nav
           .nav__item: a href="/#{I18n.locale}/" = t("survey")
-          - if not current_page.url == "/it/" || current_page.url == "/en/"
+          - if not current_page.url == "/it/" || current_page.url == "/en/" || current_page.url == "/es/"
             .nav__item: a href="/#{I18n.locale}/news/" News
           .nav__item--divider.visible--on-desk: span |
 
-          - if current_page.url == "/it/" || current_page.url == "/en/"
+          - if current_page.url == "/it/" || current_page.url == "/en/" || current_page.url == "/es/"
             .nav__item: a href="/it/" Italiano
             .nav__item: a href="/en/" English
+            .nav__item: a href="/es/" Español
           - else
             .nav__item: a href="/it/news/" Italiano
             .nav__item: a href="/en/news/" English
+            / .nav__item: a href="/es/news/" Español
