@@ -11,7 +11,7 @@ html
     meta property="og:title" content=t("og.title")
     meta property="og:description" content=t("og.description")
     meta property="og:url" content=t("og.url")
-
+    = yield_content :head
     = stylesheet_link_tag "application"
     = partial "js_includes"
 
