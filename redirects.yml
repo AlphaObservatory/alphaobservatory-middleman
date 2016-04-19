@@ -1,4 +1,7 @@
 "it/inchiesta": "/it/"
 "en/survey": "/en/"
 "es/encuesta": "/es/"
+"inchiesta": "/it/"
+"survey": "/en/"
+"encuesta": "/es/"
 "it/beta": "http://survey.alphaobservatory.org/"
