@@ -25,9 +25,3 @@ exclude_from_upload:
 
 cloudfront_invalidate_root: true
 concurrency_level: 5
-
-s3_id: AKIAJOFOB5QTMN4KVIHA
-s3_secret: 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
-s3_bucket: www.alphaobservatory.org
-s3_endpoint: eu-west-1
-
