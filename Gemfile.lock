@@ -100,7 +100,7 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
-    middleman-dato (0.5.12)
+    middleman-dato (0.5.13)
       faraday (>= 0.9.0)
       faraday_middleware (>= 0.9.0)
       imgix (>= 0.3.1)
@@ -194,7 +194,7 @@ DEPENDENCIES
   jquery-middleman
   middleman (~> 3.3.7)
   middleman-autoprefixer
-  middleman-dato (= 0.5.12)
+  middleman-dato (= 0.5.13)
   middleman-livereload (~> 3.1.0)
   middleman-pagination!
   pry
