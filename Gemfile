@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem "jquery-middleman"
 gem "middleman", "~>3.3.7"
 gem "middleman-autoprefixer"
-gem "middleman-dato", "0.5.13"
+gem "middleman-dato", "0.5.14"
 gem "middleman-livereload", "~> 3.1.0"
 gem 'middleman-pagination', github: "tom-cc/middleman-pagination"
 gem "redcarpet"
