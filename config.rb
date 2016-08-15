@@ -15,20 +15,6 @@ activate :livereload
 activate :syntax, line_numbers: false
 activate :directory_indexes
 
-langs.each do |l|
-  data.typologies.each do |type_lang|
-    type_lang[l.to_s].each do |t|
-      proxy "/#{l}/#{t.slug}.html", "/results.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
-    end
-  end
-
-  data.typologies.each do |type_lang|
-    type_lang[l.to_s].each do |t|
-      proxy "/#{l}/#{t.slug}-offline.html", "/results-offline.html", :ignore => true, :locals => { :typology => t}, locale: l, lang: l
-    end
-  end
-end
-
 # DATO
 ##################################
 
