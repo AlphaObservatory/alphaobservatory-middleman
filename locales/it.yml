@@ -1,7 +1,10 @@
 ---
 it:
   survey: "Inchiesta"
-
+  langs:
+    it: Italiano
+    en: English
+    es: Espanol
 
   result:
     title: "Sei un tipo %{tipo}!"

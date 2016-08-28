@@ -1,0 +1,23 @@
+.top-bar
+  background-color: $primary-color
+  +margin-bottom(1)
+.top-bar__inner
+  padding: 5px 0
+  color: $white-color
+
+.top-bar__nav
+  text-align: right
+  +font-size(smallprint)
+
+.top-bar__nav__item
+  color: $white-color
+  a
+    color: $white-color
+    text-decoration: none
+  &.is-active
+    font-weight: bold
+    a
+      pointer-events: none
+      cursor: default
+
+

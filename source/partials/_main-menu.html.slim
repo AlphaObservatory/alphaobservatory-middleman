@@ -1,3 +1,11 @@
+.top-bar
+  .wrap
+    .top-bar__inner
+      .nav--dots.top-bar__nav
+        - [:it, :en, :es].each do |l|
+          .nav__item.top-bar__nav__item class=("is-active" if @lang == l)
+            a href="/#{l}" #{t("langs.#{l}")}
+
 header.header
   .wrap
     .or
@@ -13,11 +21,3 @@ header.header
             .nav__item: a href="/#{I18n.locale}/news/" News
           .nav__item--divider.visible--on-desk: span |
 
-          - if current_page.url == "/it/" || current_page.url == "/en/" || current_page.url == "/es/"
-            .nav__item: a href="/it" Italiano
-            .nav__item: a href="/en" English
-            .nav__item: a href="/es" Español
-          - else
-            .nav__item: a href="/it/news/" Italiano
-            .nav__item: a href="/en/news/" English
-            / .nav__item: a href="/es/news/" Español

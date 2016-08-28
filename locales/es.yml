@@ -1,6 +1,10 @@
 ---
 es:
   survey: "Encuesta"
+  langs:
+    it: Italiano
+    en: English
+    es: Espanol
   result:
     title: "Eres un tipo %{tipo}!"
     share_profile: "Comparte que tipo eres con tus amigos!"

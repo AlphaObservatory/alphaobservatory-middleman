@@ -2,6 +2,11 @@
 en:
   survey: "Survey"
 
+  langs:
+    it: Italiano
+    en: English
+    es: Espanol
+
   result:
     title: "You are the %{tipo} type!"
     share_profile: "Share your profile with your friends!"
