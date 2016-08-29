@@ -1,0 +1,24 @@
+.newsfeed
+.newsfeed__inner
+  position: relative
+
+.newsfeed__inner__label
+  +padding(1)
+  +heading-font-family
+  +font-size(beta)
+  +vertical-margin(2)
+  background-color: $cream-color
+  border-radius: 7px
+  display: inline-block
+  &:after
+    content: ""
+    display: block
+    border-bottom: 2px solid $cream-color
+    position: absolute
+    width: 100%
+
+.newsfeed__box
+.newsfeed__box__title
+  +font-size(gamma)
+  color: $aqua-color
+
