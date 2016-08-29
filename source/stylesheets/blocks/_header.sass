@@ -6,7 +6,23 @@
   vertical-align: middle
   img
     vertical-align: middle
-    max-width: 40px
     margin-right: 10px
     +at-breakpoint(lap)
-      max-width: 80px
+      max-width: 100%
+
+.header__inner
+  position: relative
+
+.header__nav
+  text-align: right
+.header__nav__item
+  &:before
+    margin: 0 2em
+  a
+    text-transform: uppercase
+    text-decoration: none
+
+.header__cta
+  position: absolute
+  right: 0
+  top: 0

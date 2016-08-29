@@ -8,16 +8,21 @@
 
 header.header
   .wrap
-    .or
-      .or__item
-        .header__logo
-          a href="/#{I18n.locale}"
-            = image_tag "logo.jpg"
-          span.visible--on-desk Alpha Observatory
-      .or__item
-        nav.nav
-          .nav__item: a href="/#{I18n.locale}/" = t("survey")
-          - if not current_page.url == "/it/" || current_page.url == "/en/" || current_page.url == "/es/"
-            .nav__item: a href="/#{I18n.locale}/news/" News
-          .nav__item--divider.visible--on-desk: span |
+    .header__inner
+      .grid--wide.grid--bottom
+        .grid__item.lap-2-12
+          .header__logo
+            a href="/#{I18n.locale}"
+              = image_tag "logo.png"
+        .grid__item.lap-10-12
+          .header__menu
+            nav.nav--dots.nav--expands.header__nav
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Home
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Chi siamo
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Inchiesta
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" News
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Blog
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Contattaci
+
+            a.button--huge.button--cta.header__cta href="#" Fai il questionario
 
