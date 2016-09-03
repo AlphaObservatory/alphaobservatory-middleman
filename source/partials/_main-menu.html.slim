@@ -17,12 +17,13 @@ header.header
         .grid__item.lap-10-12
           .header__menu
             nav.nav--dots.nav--expands.header__nav
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Home
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Chi siamo
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Inchiesta
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" News
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Blog
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" Contattaci
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.home")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.about")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.survey")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.news")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.blog")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
 
-            a.button--huge.button--cta.header__cta href="#" Fai il questionario
+            .header__cta
+              = partial "cta"
 
