@@ -1,25 +1,31 @@
 ---
-title: Alpha Observatory
 ---
+
+- content_for(:head)
+  == dato_meta_tags(dato.home)
+
 
 = partial "main-menu"
 = partial "splash"
+
+
+
 
 section.video.space--top-5
   .wrap
     .video__inner
       .grid--wide
         .grid__item.lap-6-12
-          iframe width="100%" height="315" src="https://www.youtube.com/embed/J7XhvwuRtdM" frameborder="0" allowfullscreen="allowfullscreen"
+          iframe width="100%" height="315" src="#{dato.home.video.url}" frameborder="0" allowfullscreen="allowfullscreen"
 
         .grid__item.lap-6-12
           .video__content
-            h2.video__content__title Cos’è la Ricerca mondiale sulle nuove generazioni
-            p.video__content__body Uda nobissi musapis alit quiste voloratiat molenet ut dit la con eatem arites deliqua eritatusam, que volorem dolessequam volutaturit fuga.
+            h2.video__content__title = dato.home.video_title
+            p.video__content__body = dato.home.video_abstract
 
-            p: a href="#" scopri di più...
+            p: a href="#{dato.home.video_url}" scopri di più...
 
-            a.button--huge.button--cta href="#" Fai il questionario
+            a.button--huge.button--cta href="/inchiesta" Fai il questionario
 
 
 section.newsfeed.space--top-1

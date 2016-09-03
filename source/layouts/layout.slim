@@ -1,15 +1,10 @@
 doctype 5
 html
   head
-    title Osservatorio Alpha
     meta charset="utf-8"
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1"
     meta name="mobile-web-app-capable" content="yes"
-
-    meta property="og:title" content=t("og.title")
-    meta property="og:description" content=t("og.description")
-    meta property="og:url" content=t("og.url")
     = yield_content :head
     = stylesheet_link_tag "application"
     = partial "js_includes"
@@ -20,7 +15,22 @@ html
 
     = yield
 
-    footer.footer.space--top-5
+
+    section.social-box.space--top-5
+      .wrap
+        .social-box__inner
+          h4.social-box__title Seguici su
+          .grid--center
+            .grid__item.width-6-12.lap-3-12.desk-1-12
+              a.social-box__item href="https://www.facebook.com/alphaobservatory/" target="_blank": p.icon--facebook
+            .grid__item.width-6-12.lap-3-12.desk-1-12
+              a.social-box__item href="#" target="_blank": p.icon--twitter
+            .grid__item.width-6-12.lap-3-12.desk-1-12
+              a.social-box__item href="https://www.youtube.com/channel/UC7AwdUpQjRiO4B1ojxOtEIg" target="_blank": p.icon--youtube
+            .grid__item.width-6-12.lap-3-12.desk-1-12
+              a.social-box__item href="#" target="_blank": p.icon--gplus
+
+    footer.footer.space--top-1
       .wrap
         .footer__inner
           p Alpha Observatory Ita/Eng: +39 349 536 4554 | Ita/Esp: +39 346 1476543 | alphaobservatory@gmail.com

@@ -1,12 +1,17 @@
 .social-box
-  +heading-font-family
-  max-width: 80%
-  margin: 0 auto
+.social-box__inner
+  +padding-bottom(2)
+.social-box__title
+  text-align: center
+  +font-size(beta)
+  +vertical-padding(2)
+.social-box__item
+  background-color: $white-color
+  border: 1px solid $primary-color
+  color: $primary-color
+  +font-size(40px)
+  display: block
+  text-align: center
+  +padding(1)
+  border-radius: 5%
 
-.social-box__link
-  display: list-item
-  list-style-type: disc
-  list-style-position: inside
-
-  &:hover
-    text-decoration: underline
