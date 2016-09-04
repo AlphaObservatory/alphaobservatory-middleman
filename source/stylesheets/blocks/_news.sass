@@ -1,34 +1,38 @@
 .news
-  background-color: $light-body-color
-  a
-    text-decoration: none
-
 .news__inner
   +vertical-padding(2)
 
-.news__body
+.news__item
+  background-color: $white-color
+  box-shadow: inset 0 0 30px rgba(0,0,0,.1)
+  +margin-bottom(1)
+
+.news__item__inner
+  +padding(1)
+
+.news__item__body
   display: block
   border-bottom: 1px dotted $black-color
   +vertical-padding(2)
   +margin-bottom(3)
 
-.news__title
-  +font-size(alpha)
+.news__item__title
+  +font-size(delta)
   +heading-font-family
+  +margin-bottom(1)
 
-.news__image
-  border: 1px dotted $black-color
-  +vertical-margin(1)
-  height: 236px
-  background-size: cover !important
-  background-repeat: no-repeat !important
-  background-position: center
-
-.news__abstract
-  +heading-font-family
-  +font-size(gamma)
+.news__item__date
   font-style: italic
+  +font-size(smallprint)
 
-.news__actions
+.news__item__image
+  +margin-bottom(1)
+  border: 1px solid transparent
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+
+.news__item__abstract
+
+.news__item__actions
   text-align: right
 

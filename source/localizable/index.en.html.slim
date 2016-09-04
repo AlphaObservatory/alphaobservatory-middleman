@@ -1,15 +1,11 @@
 ---
-title: Alpha Observatory
 ---
 
-.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-  = partial "main-menu"
+- content_for(:head)
+  == dato_meta_tags(dato.home)
 
-  main.mdl-layout__content
-    .page-content.space--both-5
-      .wrap
-        .grid
-          .grid__item.lap-3-12
-            = image_tag "logo.jpg", class: "logo"
-          .grid__item.lap-9-12
-            div
+= partial "main-menu"
+= partial "splash"
+= partial "video"
+= partial "newsfeed", locals: { news: dato.home.news_en}
+

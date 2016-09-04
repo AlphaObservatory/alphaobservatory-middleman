@@ -10,39 +10,38 @@ seo:
 main
   .page-header
     .wrap.page-header__inner
-      h1.page-header__title  = t("news.title")
-      p.page-header__subtitle  = t("news.subtitle")
+      h1.page-header__title
+        =' t("news.title")
+        ' -
+        = t("news.subtitle")
 
   section.news
     .wrap
       .grid
         .grid__item.desk-8-12
           .news__inner
-            - dato.news_its.values.sort_by(&:date).reverse.each do |n|
-                .grid__item.width-2-12.visible--on-desk
-                  .news__date
-                    = partial "fancy-date", locals: { date: n.date}
-                .grid__item.width-10-12
-
-                  .news__body
-                    h2.news__title
-                      a href="/it/news/#{n.slug}/" = n.title
-                    .news__date__simple.hidden--on-desk
-                      = I18n.l n.date, format: "%d %B %Y"
-
+            .grid
+              - dato.news_its.values.sort_by(&:date).reverse.each do |n|
+                .grid__item.lap-6-12
+                  .news__item
                     - if n.image.present?
-                      .news__image style="background: url(#{n.image.file.width(600).height(200).format("jpg").fit("crop").to_url}); center / cover"
+                      .news__item__image
+                        = link_to "/it/news/#{n.slug}/" do
+                          = image_tag n.image.file.width(400).height(300).format("jpg").fit("crop").to_url
 
-                    .news__abstract
-                      = n.abstract
-
-                    .news__actions.space--top-2
-                      a.button--primary.button--small href="/it/news/#{n.slug}/" = t("news.read_more")
+                    .news__item__inner
+                      .news__item__date = I18n.l n.date, format: "%d %B %Y"
+                      .news__body
+                        h2.news__item__title
+                          a href="/it/news/#{n.slug}/" = n.title
+                        .news__item__abstract
+                          = n.abstract
+                        a.read-more--right href="/it/news/#{n.slug}/" = t("ui.read_more")
 
         .grid__item.desk-4-12.visible--on-desk
           aside
             = partial 'social-box', locals: { title: "Pagine Social", fb_link: "https://www.facebook.com/osservatorioalpha/"}
-            
+
 
 
 

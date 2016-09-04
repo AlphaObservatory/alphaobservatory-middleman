@@ -19,7 +19,7 @@ it:
     survey: "Inchiesta"
     news: "News"
     blog: "Blog"
-    contact: "Contact"
+    contact: "Contatti"
 
   defaults: &defaults
     day_names:
@@ -32,4 +32,3 @@ it:
   news:
     title: "News"
     subtitle: "Aggiornamenti sul progetto"
-    read_more: "leggi..."
