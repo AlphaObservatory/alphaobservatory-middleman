@@ -1,0 +1,16 @@
+section.newsfeed.space--top-1
+  .wrap
+    .newsfeed__inner
+      .newsfeed__inner__label = t("ui.news")
+      .grid
+        - news.each do |news|
+          .grid__item.lap-6-12
+            .flag--top.newsfeed__box
+              .flag__image.newsfeed__box__image
+                = image_tag news.image.file.height(350).width(500).ch("Width","DPR").dpr(1).fit("crop").to_url
+
+              .flag__body
+                h3.newsfeed__box__title = news.title
+                .newsfeed__box__body = news.abstract
+
+                a.read-more href="/#{@lang}/news/#{news.slug}" = t("ui.read_more")

@@ -19,9 +19,9 @@ header.header
             nav.nav--dots.nav--expands.header__nav.visible--on-lap
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.home")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.about")
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.survey")
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.news")
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.blog")
+              .nav__item.header__nav__item: a href="https://survey.alphaobservatory.org/#{I18n.locale}/" = t("menu.survey")
+              .nav__item.header__nav__item: a href="/#{I18n.locale}/news" = t("menu.news")
+              / .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.blog")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
 
             .header__cta

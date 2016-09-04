@@ -6,35 +6,6 @@
 
 = partial "main-menu"
 = partial "splash"
+= partial "video"
+= partial "newsfeed", locals: { news: dato.home.news_it}
 
-section.video.space--top-5
-  .wrap
-    .video__inner
-      .grid--wide
-        .grid__item.lap-6-12
-          iframe width="100%" height="315" src="#{dato.home.video.url}" frameborder="0" allowfullscreen="allowfullscreen"
-
-        .grid__item.lap-6-12
-          .video__content
-            h2.video__content__title = dato.home.video_title
-            p.video__content__body = dato.home.video_abstract
-
-            a.read-more--right href="#{dato.home.video_url}" = t("ui.read_more")
-
-
-section.newsfeed.space--top-1
-  .wrap
-    .newsfeed__inner
-      .newsfeed__inner__label = t("ui.news")
-      .grid
-        - dato.home.news_it.each do |news|
-          .grid__item.lap-6-12
-            .flag--top.newsfeed__box
-              .flag__image.newsfeed__box__image
-                = image_tag news.image.file.height(350).width(500).ch("Width","DPR").dpr(1).fit("crop").to_url
-
-              .flag__body
-                h3.newsfeed__box__title = news.title
-                .newsfeed__box__body = news.abstract
-
-                a.read-more href="/it/news/#{news.slug}" = t("ui.read_more")

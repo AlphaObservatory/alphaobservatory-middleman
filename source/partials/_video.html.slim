@@ -1,0 +1,13 @@
+section.video.space--top-5
+  .wrap
+    .video__inner
+      .grid--wide
+        .grid__item.lap-6-12
+          iframe width="100%" height="315" src="#{dato.home.video.url}" frameborder="0" allowfullscreen="allowfullscreen"
+
+        .grid__item.lap-6-12
+          .video__content
+            h2.video__content__title = dato.home.video_title
+            p.video__content__body = dato.home.video_abstract
+
+            a.read-more--right href="#{dato.home.video_url}" = t("ui.read_more")
