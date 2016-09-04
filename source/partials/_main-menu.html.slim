@@ -10,13 +10,13 @@ header.header
   .wrap
     .header__inner
       .grid--wide.grid--bottom
-        .grid__item.lap-2-12
+        .grid__item.width-4-12.lap-2-12
           .header__logo
             a href="/#{I18n.locale}"
               = image_tag "logo.png"
-        .grid__item.lap-10-12
+        .grid__item.width-8-12.lap-10-12
           .header__menu
-            nav.nav--dots.nav--expands.header__nav
+            nav.nav--dots.nav--expands.header__nav.visible--on-lap
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.home")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.about")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.survey")

@@ -16,15 +16,23 @@
 
 .header__nav
   text-align: right
+
 .header__nav__item
   &:before
-    margin: 0 2em
     color: $aqua-color
     font-weight: bold
   a
     text-transform: uppercase
     text-decoration: none
     color: $primary-color
+
+  +at-breakpoint(lap)
+    &:before
+      margin: 0 1em
+
+  +at-breakpoint(desk)
+    &:before
+      margin: 0 2em
 
 .header__cta
   position: absolute

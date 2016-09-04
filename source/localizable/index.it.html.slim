@@ -19,7 +19,7 @@ section.video.space--top-5
             h2.video__content__title = dato.home.video_title
             p.video__content__body = dato.home.video_abstract
 
-            p: a href="#{dato.home.video_url}" = t("ui.read_more")
+            a.read-more--right href="#{dato.home.video_url}" = t("ui.read_more")
 
 
 section.newsfeed.space--top-1
@@ -29,28 +29,28 @@ section.newsfeed.space--top-1
       .grid
         .grid__item.lap-6-12
           .flag--top.newsfeed__box
-            .flag__image
-              = image_tag src="http://placehold.it/150x150", class: "newsfeed__box__image"
+            .flag__image.newsfeed__box__image
+              = image_tag src="http://placehold.it/150x150"
 
             .flag__body
               h3.newsfeed__box__title Una news tuta nuova
               .newsfeed__box__body
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit in aperiam id exercitationem error libero, rem, temporibus porro quae beatae illum blanditiis nostrum. Consequatur, harum, molestiae! Similique magni consequatur iusto?
 
-                p: a href="#" = t("ui.read_more")
+                a.read-more href="#" = t("ui.read_more")
 
 
         .grid__item.lap-6-12
           .flag--top.newsfeed__box
-            .flag__image
-              = image_tag src="http://placehold.it/150x150", class: "newsfeed__box__image"
+            .flag__image.newsfeed__box__image
+              = image_tag src="http://placehold.it/150x150"
 
             .flag__body
               h3.newsfeed__box__title Una news tuta nuova
               .newsfeed__box__body
                 p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit in aperiam id exercitationem error libero, rem, temporibus porro quae beatae illum blanditiis nostrum. Consequatur, harum, molestiae! Similique magni consequatur iusto?
 
-                p: a href="#" = t("ui.read_more")
+                a.read-more href="#" = t("ui.read_more")
 
 
 

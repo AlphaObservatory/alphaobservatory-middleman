@@ -18,6 +18,18 @@
     width: 100%
 
 .newsfeed__box
+  +margin-bottom(2)
+  +at-breakpoint(lap)
+    +margin-bottom(0)
+
+.newsfeed__box__image
+  width: 30%
+  > img
+    width: 100%
+
+  +at-breakpoint(desk)
+    width: 50%
+
 .newsfeed__box__title
   +font-size(gamma)
   color: $aqua-color

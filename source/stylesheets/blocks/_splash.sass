@@ -4,14 +4,31 @@
 
 .splash__inner
   position: relative
-  margin-bottom: -60px
+  margin-bottom: 0
+  +vertical-padding(2)
+
+  +at-breakpoint(lap)
+    +vertical-padding(0)
+    margin-bottom: -20px
+  +at-breakpoint(desk)
+    margin-bottom: -60px
+
 
 .splash__image
   position: relative
-  top: -28px
+  +at-breakpoint(lap)
+    top: -28px
 
 .splash__claim
-  +font-size(alpha)
+  h1
+    +special-font-family
+    +font-size(20px)
+
+  +at-breakpoint(lap)
+    h1
+      +special-font-family
+      +font-size(40px)
+
   +center-vertically
   width: 50%
   text-shadow: 0px 0px 5px rgba(86, 84, 84, 0.85)
