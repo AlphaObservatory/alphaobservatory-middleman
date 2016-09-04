@@ -1,0 +1,18 @@
+ruby:
+  url = "/#{@lang}/news/#{n.slug}/"
+  date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
+
+.news__item
+  - if n.image.present?
+    .news__item__image
+      = link_to url do
+        = image_tag n.image.file.width(400).height(300).format("jpg").fit("crop").to_url
+
+  .news__item__inner
+    .news__item__date = I18n.l n.date, format: date_format
+    .news__body
+      h2.news__item__title
+        a href=url = n.title
+      .news__item__abstract
+        = n.abstract
+      a.read-more--right href=url = t("ui.read_more")
