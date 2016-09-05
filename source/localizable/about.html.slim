@@ -1,0 +1,19 @@
+- content_for(:head)
+  == dato_meta_tags(dato.about)
+
+= partial "main-menu"
+
+main
+  .page-header
+    .wrap.page-header__inner
+      h1.page-header__title = dato.about.title
+      p = dato.about.subtitle
+
+  section
+    .wrap
+      .grid--center
+        .grid__item.lap-8-12
+          article.space--top-2.formatted-content
+            = dato.about.body
+
+

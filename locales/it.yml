@@ -21,6 +21,9 @@ it:
     blog: "Blog"
     contact: "Contatti"
 
+  about:
+      title:
+
   defaults: &defaults
     day_names:
       [~, Lunedì, Martedì, Mercoledì, Giovedì, Venerdì, Sabato, Domenica]
