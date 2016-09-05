@@ -1,3 +1,6 @@
+ruby:
+  date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
+
 - content_for(:head)
   == dato_meta_tags(article)
 
@@ -6,22 +9,20 @@
 article.article
   .page-header
     .wrap.page-header__inner
+      p.news__item__date = I18n.l article.date, format: date_format
+
       h1.page-header__title = article.title
-      .page-header__subtitle
-        = article.abstract
+      .page-header__subtitle = article.abstract
 
 .wrap
   .article__featured-image
     - if article.image.present?
       img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
 
-    .article__date
-      = partial "fancy-date", locals: { date: article.date }
-
   .grid--center: .grid__item.desk-8-12
-    .article__content.formatted-content    
+    .article__content.formatted-content
       = article.body
-  
+
     - if I18n.locale == :it && dato.news_its[article.id].gallery.any?
       .article__gallery
         - dato.news_its[article.id].gallery.each do |g|
