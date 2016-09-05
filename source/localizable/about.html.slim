@@ -11,9 +11,16 @@ main
 
   section
     .wrap
+      = partial "video", locals: { text: 0 }
       .grid--center
         .grid__item.lap-8-12
-          article.space--top-2.formatted-content
+          article.space--both-2.formatted-content
             = dato.about.body
+
+          .space--both-2.align--center
+            = partial "cta"
+
+          - if dato.about.image.present?
+            img src=dato.about.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
 
 
