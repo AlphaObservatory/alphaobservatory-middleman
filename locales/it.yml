@@ -31,11 +31,3 @@ it:
       [~, Gennaio, Febbraio, Marzo, Apria, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
     formats:
        default: "%d. %B %Y"
-
-  news:
-    title: "News"
-    subtitle: "Aggiornamenti sul progetto"
-
-  blog:
-    title: "Blog"
-    subtitle: "Approfondimenti"

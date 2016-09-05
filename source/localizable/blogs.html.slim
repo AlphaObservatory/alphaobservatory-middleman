@@ -1,15 +1,16 @@
 ruby:
   news = @lang == :it ? dato.news_its : dato.news_ens
 
+- content_for(:head)
+  == dato_meta_tags(dato.blog)
+
 = partial "main-menu"
 
 main
   .page-header
     .wrap.page-header__inner
-      h1.page-header__title
-        =' t("blog.title")
-        ' -
-        = t("blog.subtitle")
+      h1.page-header__title = dato.blog.title
+      p.page-header__subtitle = dato.blog.subtitle
 
   section.news
     .wrap

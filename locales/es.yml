@@ -5,18 +5,22 @@ es:
     it: Italiano
     en: English
     es: Espanol
-  result:
-    title: "Eres un tipo %{tipo}!"
-    share_profile: "Comparte que tipo eres con tus amigos!"
-    fb_button_label: "Share on facebook"
-    invite_title: "Invita tus amigos a hacer esta encuesta!"
-    invite_text: "Acabo de participar a esta Investigación Mundial sobre las Nuevas Generaciones dirigida a millones de jovenes. Participa también tu!"
-    facebook_title: "Soy un tipo %{tipo}! ¿ Y tu, que tipo eres?"
-    facebook_page: "https://www.facebook.com/alphaobservatory/"
-  og:
-    title: "Haz el test!"
-    description: "Participa a la Investigación Mundial sobre las Nuevas Generaciones"
-    url: "http://www.alphaobservatory.org/es/"
+
+
+  ui:
+    read_more: "lee..."
+    follow_us: "Follow us"
+    footer: "Alpha Observatory Ita/Eng: +39 349 536 4554 | Ita/Esp: +39 346 1476543 | alphaobservatory@gmail.com"
+    cta: "Haz el test!"
+    news: "News"
+
+  menu:
+    home: "Home"
+    about: "Projecto"
+    survey: "Encuesta"
+    news: "News"
+    blog: "Blog"
+    contact: "Contacto"
 
   defaults: &defaults
     day_names:
@@ -25,8 +29,3 @@ es:
       [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
     formats:
        default: "%d. %B %Y"
-
-  news:
-    title: "News"
-    subtitle: "Actualizaciones sobre el proyecto"
-    read_more: "lee..."

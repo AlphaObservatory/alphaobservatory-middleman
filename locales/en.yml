@@ -21,10 +21,3 @@ en:
     news: "News"
     blog: "Blog"
     contact: "Contact"
-
-  news:
-    title: "News"
-    subtitle: "Updates about the project"
-  blog:
-    title: "Blog"
-    subtitle: "Going deep into the project!"

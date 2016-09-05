@@ -1,5 +1,6 @@
 ruby:
-  url = "/#{@lang}/news/#{n.slug}/"
+  news_lang = @lang == :it ? "it" : "en"
+  url = "/#{news_lang}/news/#{n.slug}/"
   date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
 
 .news__item
