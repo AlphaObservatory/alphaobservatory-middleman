@@ -4,7 +4,7 @@ ruby:
   case @lang
     when :it
       blog_items = dato.news_its.values.select{ |article| article.pubblication == true }.count
-    when :en
+    else
       blog_items = dato.news_ens.values.select{ |article| article.pubblication == true }.count
   end
 
@@ -34,6 +34,7 @@ header.header
 
               - if blog_items > 0
                 .nav__item.header__nav__item: a href="/#{I18n.locale}/blogs" = t("menu.blog")
+
               / .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
 
             .header__cta
