@@ -1,3 +1,13 @@
+ruby:
+  # verifico che ci siano articoli per il blog
+  # altrimenti la voce di menu la nascondo
+  case @lang
+    when :it
+      blog_items = dato.news_its.values.select{ |article| article.pubblication == true }.count
+    when :en
+      blog_items = dato.news_ens.values.select{ |article| article.pubblication == true }.count
+  end
+
 .top-bar
   .wrap
     .top-bar__inner
@@ -19,10 +29,12 @@ header.header
             nav.nav--dots.nav--expands.header__nav.visible--on-lap
               .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.home")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/about" = t("menu.about")
-              .nav__item.header__nav__item: a href="https://survey.alphaobservatory.org/#{I18n.locale}/" = t("menu.survey")
+              .nav__item.header__nav__item: a href="https://survey.alphaobservatory.org/#{I18n.locale}/" target="_blank" = t("menu.survey")
               .nav__item.header__nav__item: a href="/#{I18n.locale}/news" = t("menu.news")
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/blogs" = t("menu.blog")
-              .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
+
+              - if blog_items > 0
+                .nav__item.header__nav__item: a href="/#{I18n.locale}/blogs" = t("menu.blog")
+              / .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
 
             .header__cta
               = partial "cta"
