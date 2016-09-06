@@ -14,18 +14,12 @@ main
 
   section.news
     .wrap
-      .grid
-        .grid__item.desk-8-12
-          .news__inner
-            .grid
-              - news.values.sort_by(&:date).reverse.each do |n|
-                - if n.pubblication.present? || n.pubblication == true
-                  .grid__item.lap-6-12
-                    = partial "news_item", locals: {n: n}
-
-        .grid__item.desk-4-12.visible--on-desk
-          aside
-            = partial 'social-box', locals: { title: "Pagine Social", fb_link: "https://www.facebook.com/osservatorioalpha/"}
+      .news__inner
+        .grid
+          - news.values.sort_by(&:date).reverse.each do |n|
+            - if n.pubblication.present? || n.pubblication == true
+              .grid__item.lap-4-12
+                = partial "news_item", locals: {n: n}
 
 
 
