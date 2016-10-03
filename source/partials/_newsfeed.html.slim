@@ -1,9 +1,14 @@
+
 section.newsfeed.space--top-1
   .wrap
     .newsfeed__inner
       .newsfeed__inner__label = t("ui.news")
       .grid
         - news.each do |news|
+          ruby:
+            news_lang = @lang == :it ? "it" : "en"
+            url = "/#{news_lang}/news/#{news.slug}/"
+            date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
           .grid__item.lap-6-12
             .flag--top.newsfeed__box
               .flag__image.newsfeed__box__image
@@ -13,4 +18,4 @@ section.newsfeed.space--top-1
                 h3.newsfeed__box__title = news.title
                 .newsfeed__box__body = news.abstract
 
-                a.read-more href="/#{@lang}/news/#{news.slug}" = t("ui.read_more")
+                a.read-more href=url = t("ui.read_more")
