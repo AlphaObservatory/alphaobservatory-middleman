@@ -35,7 +35,7 @@ header.header
               - if blog_items > 0
                 .nav__item.header__nav__item: a href="/#{I18n.locale}/blogs" = t("menu.blog")
 
-              / .nav__item.header__nav__item: a href="/#{I18n.locale}/" = t("menu.contact")
+              .nav__item.header__nav__item: a href="mailto:alphaobservatory@gmail.com" = t("menu.contact")
 
             .header__cta
               = partial "cta"
