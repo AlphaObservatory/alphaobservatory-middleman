@@ -13,3 +13,12 @@ function getUrlParameter(sParam) {
         }
     }
 }
+
+$(document).ready(function() {
+    var total_interviews;
+
+    $.getJSON('https://survey.alphaobservatory.org/en/total_interviews', function(data) {
+        total_interviews = data.total;
+        $(".js-total_interviews").html(total_interviews);
+    });
+});
