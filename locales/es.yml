@@ -21,7 +21,7 @@ es:
     survey: "Encuesta"
     news: "News"
     blog: "Blog"
-    contact: "Contacto"
+    contact: "Únete al team"
 
   defaults: &defaults
     day_names:
