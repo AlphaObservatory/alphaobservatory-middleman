@@ -13,7 +13,7 @@ es:
     footer: "Alpha Observatory Ita/Eng: +39 349 536 4554 | Ita/Esp: +39 346 1476543 | alphaobservatory@gmail.com"
     cta: "Haz el test!"
     news: "News"
-    total: " personas de todo el mundo<br> ya han contestado"
+    total: "<strong class='js-total_interviews'></strong> encuestas completadas"
 
   menu:
     home: "Home"

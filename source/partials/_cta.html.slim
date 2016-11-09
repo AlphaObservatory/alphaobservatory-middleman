@@ -1,5 +1,8 @@
-div
-  strong.js-total_interviews
-  =' t("ui.total")
-a.button--huge.button--cta href="https://survey.alphaobservatory.org/#{I18n.locale}/" title="AlphaObservatory survey" target="_blank" = t("ui.cta")
+- show_counter ||= "yes"
+
+.cta
+  - if show_counter == "yes"
+    .cta__total.delta = t("ui.total")
+  .cta__button
+    a.button--huge.button--cta href="https://survey.alphaobservatory.org/#{I18n.locale}/" title="AlphaObservatory survey" target="_blank" = t("ui.cta")
 
