@@ -4,7 +4,7 @@ ruby:
 - content_for(:head)
   == dato_meta_tags(dato.news)
 
-= partial "main-menu"
+= partial "partials/main-menu"
 
 main
   .page-header
@@ -19,7 +19,7 @@ main
           - news.values.sort_by(&:date).reverse.each do |n|
             - if n.pubblication.nil? || n.pubblication == false
               .grid__item.lap-4-12
-                = partial "news_item", locals: {n: n}
+                = partial "partials/news_item", locals: {n: n}
 
 
 

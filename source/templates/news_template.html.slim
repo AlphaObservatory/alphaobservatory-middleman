@@ -4,7 +4,7 @@ ruby:
 - content_for(:head)
   == dato_meta_tags(article)
 
-= partial "main-menu"
+= partial "partials/main-menu"
 
 article.article
   .page-header
@@ -17,22 +17,15 @@ article.article
 .wrap
   .article__featured-image
     - if article.image.present?
-      img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url
+      img src=article.image.file.width(800).height(400).fit("crop").crop("entropy").format("pjpg").to_url
 
   .grid--center: .grid__item.desk-8-12
     .article__content.formatted-content
       = article.body
 
-    - if I18n.locale == :it && dato.news_its[article.id].gallery.any?
+    - if article.gallery.count > 0
       .article__gallery
-        - dato.news_its[article.id].gallery.each do |g|
-          .article__gallery__item
-            figure
-              img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url
-              figcaption: em = g.description
-    - elsif I18n.locale == :en && dato.news_ens[article.id].gallery.any?
-      .article__gallery
-        - dato.news_ens[article.id].gallery.each do |g|
+        - article.gallery.each do |g|
           .article__gallery__item
             figure
               img src=g.image.file.width(1100).format("jpg").to_url data-action="zoom" data-original=g.image.file.format("jpg").to_url

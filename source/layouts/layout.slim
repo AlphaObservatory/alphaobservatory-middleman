@@ -1,13 +1,13 @@
 doctype 5
-html
+html lang=I18n.locale
   head
     meta charset="utf-8"
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1"
     meta name="mobile-web-app-capable" content="yes"
+    = dato_favicon_meta_tags()
+    = stylesheet_link_tag "styles"
     = yield_content :head
-    = stylesheet_link_tag "application"
-    = partial "js_includes"
 
   body
 
@@ -36,4 +36,5 @@ html
           p = t("ui.footer")
           .footer__credits: a.button--micro.button--rev href="https://datocms.com" title="dato: cms for static websites" target="_blank" built with datoCMS
 
-    = partial "olark"
+    = partial "partials/js_includes"
+    = partial "partials/olark"

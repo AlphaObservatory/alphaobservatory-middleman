@@ -1,5 +1,4 @@
-//= require jquery
-//= require_tree .
+var $ = require('jquery');
 
 function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1);

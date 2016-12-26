@@ -1,7 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(dato.about)
 
-= partial "main-menu"
+= partial "partials/main-menu"
 
 main
   .page-header
@@ -11,14 +11,14 @@ main
 
   section
     .wrap
-      = partial "video", locals: { text: 0 }
+      = partial "partials/video", locals: { text: 0 }
       .grid--center
         .grid__item.lap-8-12
           article.space--both-2.formatted-content
             = dato.about.body
 
           .space--both-2.align--center
-            = partial "cta"
+            = partial "partials/cta"
 
           - if dato.about.image.present?
             img src=dato.about.image.file.width(800).height(400).fit("crop").crop("entropy").format("jpg").to_url

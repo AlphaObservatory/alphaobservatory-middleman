@@ -1,6 +1,0 @@
-#!/bin/bash
-
-ruby ./lib/augment_redirects.rb
-bundle exec middleman build
-bundle exec s3_website push
-rm s3_website.yml

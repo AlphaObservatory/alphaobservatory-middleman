@@ -4,8 +4,8 @@ ruby:
 - content_for(:head)
   == dato_meta_tags(dato.home)
 
-= partial "main-menu"
-= partial "splash"
-= partial "video"
-= partial "newsfeed", locals: { news: news}
+= partial "partials/main-menu"
+= partial "partials/splash"
+= partial "partials/video"
+= partial "partials/newsfeed", locals: { news: news}
 
