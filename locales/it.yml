@@ -21,6 +21,7 @@ it:
     news: "News"
     blog: "Blog"
     contact: "Unisciti al team"
+    partners: Partners
 
   about:
       title:

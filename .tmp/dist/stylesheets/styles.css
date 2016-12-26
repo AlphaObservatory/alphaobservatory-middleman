@@ -203,8 +203,7 @@ template, [hidden] {
   font-family: "icons";
   font-weight: normal;
   font-style: normal;
-  src: font-url("icons.eot") format("embedded-opentype");
-  src: font-url("icons.eot?#iefix") format("embedded-opentype"), font-url("icons.woff2") format("woff2"), font-url("icons.woff") format("woff"), font-url("icons.ttf") format("ttf"), font-url("icons.svg#icons") format("svg"); }
+  src: url("/fonts/icons.woff") format("woff"), url("/fonts/icons.ttf") format("ttf"), url("/fonts/icons.svg#icons") format("svg"); }
 
 html, body {
   height: 100%; }
@@ -2163,7 +2162,7 @@ legend {
   margin-bottom: 6rem; }
 
 .sprite, .sprite--one, .sprite--three, .sprite--two {
-  background-image: image-url("sprites-1x.png");
+  background-image: url("/images/sprites-1x.png");
   background-repeat: no-repeat;
   display: inline-block;
   height: 1em;
@@ -2176,7 +2175,7 @@ legend {
     height: 100%; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
     .sprite, .sprite--one, .sprite--three, .sprite--two {
-      background-image: image-url("sprites-2x.png"); } }
+      background-image: url("/images/sprites-2x.png"); } }
 
 .sprite--one {
   background-position: 0% 0%;

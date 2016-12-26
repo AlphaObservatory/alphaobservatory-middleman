@@ -1,0 +1,30 @@
+- content_for(:head)
+  == dato_meta_tags(dato.partners_page)
+
+= partial "partials/main-menu"
+
+main
+  .page-header
+    .wrap.page-header__inner
+      h1.page-header__title = dato.partners_page.title
+      p.page-header__subtitle = dato.partners_page.subtitle
+
+  section
+    .wrap
+      .grid--center
+        .grid__item.lap-8-12
+          article.space--both-2.formatted-content
+            = dato.partners_page.description
+
+        .grid__item.lap-8-12
+          table.table
+            thead
+              tr
+                th Name
+                th Country
+            tbody
+              - dato.partners_page.partners.each do |partner|
+                tr
+                  td = link_to partner.name, partner.url, target: "_blank"
+                  td = partner.country
+
