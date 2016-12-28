@@ -14,7 +14,6 @@ en:
     cta: "Take the survey!"
     news: "News"
     total: "<strong class='js-total_interviews'></strong> surveys completed"
-    partners: Partners
 
   menu:
     home: "Home"
@@ -23,3 +22,4 @@ en:
     news: "News"
     blog: "Blog"
     contact: "Join the team"
+    partners: Partners

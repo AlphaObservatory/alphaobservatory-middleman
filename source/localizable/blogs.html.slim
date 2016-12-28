@@ -1,5 +1,6 @@
 ruby:
-  news = @lang == :it ? dato.news_its : dato.news_ens
+  binding.pry
+  news = I18n.locale == :it ? dato.news_its : dato.news_ens
 
 - content_for(:head)
   == dato_meta_tags(dato.blog)
