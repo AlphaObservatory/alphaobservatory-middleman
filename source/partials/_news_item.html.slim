@@ -1,7 +1,7 @@
 ruby:
   news_lang = @lang == :it ? "it" : "en"
   url = "/#{news_lang}/news/#{n.slug}/"
-  date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
+  date_format = I18n.locale == :it ? "%d %B %Y" : "%Y %B %d"
 
 .news__item
   - if n.image.present?

@@ -1,5 +1,5 @@
 ruby:
-  date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
+  date_format = I18n.locale == :it ? "%d %B %Y" : "%Y %B %d"
 
 - content_for(:head)
   == dato_meta_tags(article)

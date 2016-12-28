@@ -1,7 +1,7 @@
 ruby:
   # verifico che ci siano articoli per il blog
   # altrimenti la voce di menu la nascondo
-  case @lang
+  case I18n.locale
     when :it
       blog_items = dato.news_its.values.select{ |article| article.pubblication == true }.count
     else
@@ -13,7 +13,7 @@ ruby:
     .top-bar__inner
       .nav--dots.top-bar__nav
         - [:it, :en, :es].each do |l|
-          .nav__item.top-bar__nav__item class=("is-active" if @lang == l)
+          .nav__item.top-bar__nav__item class=("is-active" if I18n.locale == l)
             a href="/#{l}" #{t("langs.#{l}")}
 
 header.header

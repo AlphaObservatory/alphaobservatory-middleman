@@ -6,9 +6,9 @@ section.newsfeed.space--top-1
       .grid
         - news.each do |news|
           ruby:
-            news_lang = @lang == :it ? "it" : "en"
+            news_lang = I18n.locale == :it ? "it" : "en"
             url = "/#{news_lang}/news/#{news.slug}/"
-            date_format = @lang == :it ? "%d %B %Y" : "%Y %B %d"
+            date_format = I18n.locale == :it ? "%d %B %Y" : "%Y %B %d"
           .grid__item.lap-6-12
             .flag--top.newsfeed__box
               .flag__image.newsfeed__box__image

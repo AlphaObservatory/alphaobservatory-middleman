@@ -1,5 +1,5 @@
 ruby:
-  news = @lang == :it ? dato.home.news_it : dato.home.news_en
+  news = I18n.locale == :it ? dato.home.news_it : dato.home.news_en
 
 - content_for(:head)
   == dato_meta_tags(dato.home)
