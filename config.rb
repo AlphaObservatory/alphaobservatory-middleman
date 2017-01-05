@@ -97,7 +97,7 @@ dato.news_its.values.each do |article|
   proxy "/it/news/#{article.slug}/index.html", "/templates/news_template.html", :locals=>{ article: article, lang: :it}, ignore: true, locale: :it
 end
 dato.news_ens.values.each do |article|
-  proxy "/en/news/#{article.slug}/index.html", "/templates/news_template.html", :locals=> { article: article}, ignore: true, locale: :it
+  proxy "/en/news/#{article.slug}/index.html", "/templates/news_template.html", :locals=> { article: article}, ignore: true, locale: :en
 end
 
 activate :directory_indexes
