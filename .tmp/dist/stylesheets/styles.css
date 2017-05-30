@@ -525,7 +525,7 @@ legend {
 
 @media screen and (min-width: 1024px) {
   .header__nav__item:before {
-    margin: 0 2em; } }
+    margin: 0 1em; } }
 
 .header__cta {
   position: absolute;

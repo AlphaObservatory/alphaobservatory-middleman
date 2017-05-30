@@ -22,6 +22,7 @@ es:
     blog: "Blog"
     contact: "Únete al team"
     partners: Partners
+    analytics: Analytics
 
   defaults: &defaults
     day_names:

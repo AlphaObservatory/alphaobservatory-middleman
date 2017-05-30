@@ -21,6 +21,7 @@ it:
     blog: "Blog"
     contact: "Unisciti al team"
     partners: Partners
+    analytics: Analytics
 
   about:
       title:
